@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ofertaeducativa_ite/especializacion.dart';
 
 import 'package:ofertaeducativa_ite/pages/homePage.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: Especializacion(),
       theme: ThemeData.light().copyWith(
           appBarTheme: const AppBarTheme(
         backgroundColor: Color.fromARGB(217, 27, 57, 106),
