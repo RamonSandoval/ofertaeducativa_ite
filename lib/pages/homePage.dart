@@ -7,9 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tecnm"),
-        backgroundColor: Color.fromARGB(217, 27, 57, 106),
-        shadowColor: Colors.amber,
+        title: const Text("Tecnm"),
       ),
       drawer: Drawer(
           child: ListView(
@@ -20,6 +18,13 @@ class HomePage extends StatelessWidget {
               color: Color.fromARGB(217, 27, 57, 106),
             ),
             child: Text('Menú'),
+          ),
+          const ExpansionTile(
+            title: Text("Nosotros"),
+            children: [
+              Text("Historia"),
+              Text("Directorio"),
+            ],
           ),
           ListTile(
             title: const Text('Nosotros'),
