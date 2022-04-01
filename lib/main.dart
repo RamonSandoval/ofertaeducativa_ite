@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ofertaeducativa_ite/pages/HomePage.dart';
+import 'package:ofertaeducativa_ite/pages/licenciaturas/ingelectromecanica.dart';
 
 void main() async {
   runApp(MyApp());
@@ -8,9 +8,9 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Aysnc',
-      home: MyHomePage(),
+      home: IngElectromecanica(),
     );
   }
 }
