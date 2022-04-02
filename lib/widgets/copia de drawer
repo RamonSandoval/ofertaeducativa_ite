@@ -1,0 +1,22 @@
+ MLSubmenu(
+                        submenuContent: const Text(
+                            "Ing. en Gestión empresarial",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {}),
+                    MLSubmenu(
+                        submenuContent: const Text("Ing. Industrial",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {}),
+                    MLSubmenu(
+                        submenuContent: const Text("Ing. Mecatrónica",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {}),
+                    MLSubmenu(
+                        submenuContent: const Text(
+                            "Ing. en Sistemas computacionales",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {}),
+                    MLSubmenu(
+                        submenuContent: const Text("Lic. en Administración",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {}),

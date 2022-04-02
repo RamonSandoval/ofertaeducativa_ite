@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ofertaeducativa_ite/pages/drawers.dart';
+import 'package:ofertaeducativa_ite/widgets/drawers.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Tecnm"),
         ),
-        drawer: const Drawers(),
+        drawer: const SingleChildScrollView(child: Drawers()),
       ),
     );
   }
