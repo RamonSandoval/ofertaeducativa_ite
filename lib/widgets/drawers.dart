@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:multilevel_drawer/multilevel_drawer.dart';
+import 'package:ofertaeducativa_ite/routes/routes.dart';
 
 class Drawers extends StatelessWidget {
   const Drawers({Key? key}) : super(key: key);
@@ -75,31 +76,12 @@ class Drawers extends StatelessWidget {
                     MLSubmenu(
                         submenuContent: const Text("Ing. Electromecánica",
                             style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
+                        onClick: () {
+                          Navigator.pushReplacementNamed(
+                              context, Routes.IngEle);
+                        }),
                     MLSubmenu(
                         submenuContent: const Text("Ing. Electrónica",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text(
-                            "Ing. en Gestión empresarial",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text("Ing. Industrial",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text("Ing. Mecatrónica",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text(
-                            "Ing. en Sistemas computacionales",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text("Lic. en Administración",
                             style: TextStyle(color: Colors.white)),
                         onClick: () {}),
                     MLSubmenu(
