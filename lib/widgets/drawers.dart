@@ -92,7 +92,10 @@ class Drawers extends StatelessWidget {
                         submenuContent: const Text(
                             "Especialización en Industrial Aeroespacials",
                             style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
+                        onClick: () {
+                          Navigator.pushReplacementNamed(
+                              context, Routes.Especializaion);
+                        }),
                     MLSubmenu(
                         submenuContent: const Text(
                             "Maestría en Ingeniería Aeroespacial",
