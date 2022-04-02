@@ -40,7 +40,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 children: [
                   Card(
                     child: InkWell(
-                      splashColor: Colors.blue,
+                      splashColor: Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
                         print("card");
                       },
@@ -53,7 +53,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   ),
                   Card(
                     child: InkWell(
-                      splashColor: Colors.blue,
+                      splashColor: Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
                         print("card");
                       },
@@ -70,7 +70,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 children: [
                   Card(
                     child: InkWell(
-                      splashColor: Colors.blue,
+                      splashColor: Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
                         print("card");
                       },
@@ -83,7 +83,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   ),
                   Card(
                     child: InkWell(
-                      splashColor: Colors.blue,
+                      splashColor: Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
                         print("card");
                       },
@@ -96,9 +96,29 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   ),
                 ],
               ),
-              const Text("Objetivos"),
-              const Text("Mision"),
-              const Text("Vision"),
+              Text("Objetivo"),
+              Text(
+                  "Formar profesionistas de excelencia en Ingeniería Electromecánica, con actitud emprendedora, liderazgo y capacidad de: analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica, considerando las normas y estándares nacionales e internacionales de forma sustentable con plena conciencia ética, humanística y social."),
+              Text("Mision"),
+              Text(
+                  "Ser una institución de educación superior formadora de profesionistas en ingeniería electromecánica, capaces de promover el desarrollo sostenido, sustentable y equitativo en la región."),
+              Text("Vision"),
+              Text(
+                  "Formar profesionista de excelencia en ingeniería electromecánica, con actitud emprendedora, con liderazgo, y capacidad para analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica. Considerando las normas estándares nacionales e internacionales para fomentar el desarrollo sustentable con plena conciencia ética, humanística y social."),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Contactar',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Color.fromARGB(217, 27, 57, 106)),
+                  ),
+                ),
+              ),
             ]),
           ),
         ),
