@@ -9,7 +9,7 @@ class Drawers extends StatelessWidget {
     return MultiLevelDrawer(
         backgroundColor: Colors.blueGrey,
         subMenuBackgroundColor: Colors.amber,
-        header: Container(
+        header: SizedBox(
           height: 150,
           child: Center(
             child: Column(

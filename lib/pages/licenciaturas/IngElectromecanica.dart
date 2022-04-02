@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 void main() async {
   runApp(const IngElectromecanica());
@@ -40,27 +41,31 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 children: [
                   Card(
                     child: InkWell(
-                      splashColor: Color.fromARGB(217, 27, 57, 106),
+                      splashColor: const Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
-                        print("card");
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
                       },
                       child: const SizedBox(
                         width: 140,
                         height: 100,
-                        child: const Text("Tarjeta 1"),
+                        child: Text("Tarjeta 1"),
                       ),
                     ),
                   ),
                   Card(
                     child: InkWell(
-                      splashColor: Color.fromARGB(217, 27, 57, 106),
+                      splashColor: const Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
-                        print("card");
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
                       },
                       child: const SizedBox(
                         width: 140,
                         height: 100,
-                        child: const Text("Tarjeta 1"),
+                        child: Text("Tarjeta 1"),
                       ),
                     ),
                   ),
@@ -70,52 +75,56 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 children: [
                   Card(
                     child: InkWell(
-                      splashColor: Color.fromARGB(217, 27, 57, 106),
+                      splashColor: const Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
-                        print("card");
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
                       },
                       child: const SizedBox(
                         width: 140,
                         height: 100,
-                        child: const Text("Tarjeta 1"),
+                        child: Text("Tarjeta 1"),
                       ),
                     ),
                   ),
                   Card(
                     child: InkWell(
-                      splashColor: Color.fromARGB(217, 27, 57, 106),
+                      splashColor: const Color.fromARGB(217, 27, 57, 106),
                       onTap: () {
-                        print("card");
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
                       },
                       child: const SizedBox(
                         width: 140,
                         height: 100,
-                        child: const Text("Tarjeta 1"),
+                        child: Text("Tarjeta 1"),
                       ),
                     ),
                   ),
                 ],
               ),
-              Text("Objetivo"),
-              Text(
+              const Text("Objetivo"),
+              const Text(
                   "Formar profesionistas de excelencia en Ingeniería Electromecánica, con actitud emprendedora, liderazgo y capacidad de: analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica, considerando las normas y estándares nacionales e internacionales de forma sustentable con plena conciencia ética, humanística y social."),
-              Text("Mision"),
-              Text(
+              const Text("Mision"),
+              const Text(
                   "Ser una institución de educación superior formadora de profesionistas en ingeniería electromecánica, capaces de promover el desarrollo sostenido, sustentable y equitativo en la región."),
-              Text("Vision"),
-              Text(
+              const Text("Vision"),
+              const Text(
                   "Formar profesionista de excelencia en ingeniería electromecánica, con actitud emprendedora, con liderazgo, y capacidad para analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica. Considerando las normas estándares nacionales e internacionales para fomentar el desarrollo sustentable con plena conciencia ética, humanística y social."),
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Contactar',
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                        Color.fromARGB(217, 27, 57, 106)),
+                        const Color.fromARGB(217, 27, 57, 106)),
                   ),
                 ),
               ),
@@ -123,6 +132,21 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class Triptico extends StatelessWidget {
+  const Triptico({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Reticula'),
+      ),
+      body: SfPdfViewer.network(
+          'https://tijuana.tecnm.mx/wp-content/uploads/2017/12/Reticula_Ingenieria_Electromecanica.pdf'),
     );
   }
 }
