@@ -34,7 +34,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
               ),
               const Image(
                 image: NetworkImage(
-                    "https://www.ensenada.tecnm.mx/wp-content/uploads/2020/09/electronica.jpeg"),
+                    "https://www.ensenada.333tecnm.mx/wp-content/uploads/2020/09/electronica.jpeg"),
                 width: 350,
               ),
               Row(
@@ -117,7 +117,31 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
               SizedBox(
                 width: double.infinity,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text("Informacion de Contacto"),
+                            content: SingleChildScrollView(
+                              child: ListBody(
+                                children: const [
+                                  Text(
+                                      "Francisco Ramos Flores Jefe del Departamento de Ingeniería Eléctrica y Electrónica Correo: diee@ite.edu.mx Teléfono: 646 177 5680 ext. 2010 Vayra Valeria Medina Felix Coordinadora de carrera Correo: coord_electromecanica@ite.edu.mx")
+                                ],
+                              ),
+                            ),
+                            actions: [
+                              FlatButton(
+                                child: const Text("Aceptar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        });
+                  },
                   child: const Text(
                     'Contactar',
                     style: TextStyle(color: Colors.white),
