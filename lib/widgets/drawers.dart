@@ -83,7 +83,10 @@ class Drawers extends StatelessWidget {
                     MLSubmenu(
                         submenuContent: const Text("Ing. Electrónica",
                             style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
+                        onClick: () {
+                          Navigator.pushReplacementNamed(
+                              context, Routes.IngEle);
+                        }),
                     MLSubmenu(
                         submenuContent: const Text("Posgrados",
                             style: TextStyle(color: Colors.white)),
