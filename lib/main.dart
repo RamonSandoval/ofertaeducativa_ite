@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ofertaeducativa_ite/pages/homePage.dart';
-import 'package:ofertaeducativa_ite/routes/MovPages.dart';
+import 'package:ofertaeducativa_ite/routes/movPages.dart';
 
 void main() async {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
