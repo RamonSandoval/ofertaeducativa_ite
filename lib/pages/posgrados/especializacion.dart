@@ -23,7 +23,7 @@ class Especializacion extends StatelessWidget {
               icono5: Icons.grade_outlined,
               icono6: Icons.airplane_ticket,
               icono7: Icons.directions_bike,
-              labels: "Especialización en Industria Aeroes",
+              labels: "Especialización en Industria",
             )
           ],
         ),

@@ -3,10 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-void main() async {
-  runApp(const IngElectromecanica());
-}
-
 class IngElectromecanica extends StatefulWidget {
   const IngElectromecanica({Key? key}) : super(key: key);
 
@@ -35,7 +31,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
             ),
             const Image(
               image: NetworkImage(
-                  "https://www.ensenada.333tecnm.mx/wp-content/uploads/2020/09/electronica.jpeg"),
+                  "https://www.ensenada.tecnm.mx/wp-content/uploads/2020/09/electronica.jpeg"),
               width: 350,
             ),
             Row(
