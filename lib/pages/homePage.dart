@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ofertaeducativa_ite/widgets/carousel.dart';
 import 'package:ofertaeducativa_ite/widgets/drawers.dart';
 
 class HomePage extends StatelessWidget {
