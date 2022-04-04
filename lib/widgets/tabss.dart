@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ofertaeducativa_ite/widgets/button.dart';
+import 'package:ofertaeducativa_ite/widgets/carousel.dart';
 
 class Tabss extends StatelessWidget {
   final IconData icono;
@@ -41,9 +43,14 @@ class Tabss extends StatelessWidget {
             ),
             title: Text(labels),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
+              Column(
+                children: [
+                  Fotos(),
+                  Button(),
+                ],
+              ),
               Icon(Icons.directions_transit),
               Icon(Icons.directions_bike),
               Icon(Icons.directions_transit),
