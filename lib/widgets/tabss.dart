@@ -51,8 +51,16 @@ class Tabss extends StatelessWidget {
                     "Especialización en industria Aeroespacial",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
-                  Fotos(),
-                  const Button(),
+                  Row(
+                    children: [Fotos()],
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [Button()],
+                  ),
                 ],
               ),
               const Text("Proceso de admisión"),

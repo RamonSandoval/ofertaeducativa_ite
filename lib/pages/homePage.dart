@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
             title: const Text("Tecnm"),
           ),
           drawer: const SingleChildScrollView(child: Drawers()),
-          body: Inicio(),
+          body: const Inicio(),
         ),
       ),
     );
