@@ -19,9 +19,9 @@ class Especializacion extends StatelessWidget {
               icono: Icons.home,
               icono2: Icons.school,
               icono3: Icons.person_search_outlined,
-              icono4: Icons.directions_bike,
-              icono5: Icons.directions_bike,
-              icono6: Icons.directions_bike,
+              icono4: Icons.data_object,
+              icono5: Icons.grade_outlined,
+              icono6: Icons.airplane_ticket,
               icono7: Icons.directions_bike,
               labels: "Especialización en Industria Aeroes",
             )
