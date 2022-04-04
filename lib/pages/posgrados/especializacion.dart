@@ -14,7 +14,18 @@ class Especializacion extends StatelessWidget {
       child: Container(
         color: Colors.red,
         child: Column(
-          children: [Tabss()],
+          children: const [
+            Tabss(
+              icono: Icons.directions_bike,
+              icono2: Icons.directions_bike,
+              icono3: Icons.directions_bike,
+              icono4: Icons.directions_bike,
+              icono5: Icons.directions_bike,
+              icono6: Icons.directions_bike,
+              icono7: Icons.directions_bike,
+              labels: "Especialización",
+            )
+          ],
         ),
       ),
     );
