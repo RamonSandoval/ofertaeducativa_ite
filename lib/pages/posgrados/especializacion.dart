@@ -17,13 +17,13 @@ class Especializacion extends StatelessWidget {
           children: const [
             Tabss(
               icono: Icons.home,
-              icono2: Icons.directions_bike,
-              icono3: Icons.directions_bike,
+              icono2: Icons.school,
+              icono3: Icons.person_search_outlined,
               icono4: Icons.directions_bike,
               icono5: Icons.directions_bike,
               icono6: Icons.directions_bike,
               icono7: Icons.directions_bike,
-              labels: "Especialización",
+              labels: "Especialización en Industria Aeroes",
             )
           ],
         ),

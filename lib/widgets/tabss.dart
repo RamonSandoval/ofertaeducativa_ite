@@ -47,12 +47,13 @@ class Tabss extends StatelessWidget {
             children: [
               Column(
                 children: [
+                  const Text("Especialización en industria Aeroespacial"),
                   Fotos(),
-                  Button(),
+                  const Button(),
                 ],
               ),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              const Text("Proceso de admisión"),
+              const Text("COHORTE 2020-2 NÚMERO DE CONTROL	POR DEFINIR"),
               Icon(Icons.directions_transit),
               Icon(Icons.directions_transit),
               Icon(Icons.directions_transit),
