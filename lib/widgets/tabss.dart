@@ -47,7 +47,10 @@ class Tabss extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  const Text("Especialización en industria Aeroespacial"),
+                  const Text(
+                    "Especialización en industria Aeroespacial",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
                   Fotos(),
                   const Button(),
                 ],

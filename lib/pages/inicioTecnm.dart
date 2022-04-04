@@ -17,7 +17,7 @@ class Inicio extends StatelessWidget {
                 )),
           ),
           const SizedBox(
-            height: 20,
+            height: 30,
           ),
           Row(
             children: const [
@@ -39,7 +39,7 @@ class Inicio extends StatelessWidget {
               Card(
                 child: InkWell(
                   child: SizedBox(
-                    width: 180,
+                    width: 170,
                     height: 100,
                     child: Text(
                       "El Instituto Tecnológico de Ensenada, del TecNM, presenció en los meses de febrero y marzo de 2022, en el gimnasio del Centro de Formación, Académica",
@@ -51,7 +51,7 @@ class Inicio extends StatelessWidget {
               Card(
                 child: InkWell(
                   child: SizedBox(
-                    width: 180,
+                    width: 170,
                     height: 100,
                     child: Text(
                       "El Instituto Tecnológico de Ensenada del TecNM en el semestre 2022-1, con periodo de enero a junio, reúne a estudiantes de los distintos programas.",
@@ -63,7 +63,7 @@ class Inicio extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 20,
+            height: 25,
           ),
           Row(
             children: const [
@@ -75,7 +75,7 @@ class Inicio extends StatelessWidget {
               Image(
                 image: NetworkImage(
                     "https://www.ensenada.tecnm.mx/wp-content/uploads/2022/03/Concurso-ANFEI-mar2022.png"),
-                width: 180,
+                width: 170,
                 height: 125,
               ),
             ],
@@ -85,7 +85,7 @@ class Inicio extends StatelessWidget {
               Card(
                 child: InkWell(
                   child: SizedBox(
-                    width: 180,
+                    width: 170,
                     height: 100,
                     child: Text(
                       "El Instituto Tecnológico de Ensenada, del TecNM, durante la cuarta semana del mes de marzo, se llevaron a cabo reuniones.",
@@ -97,7 +97,7 @@ class Inicio extends StatelessWidget {
               Card(
                 child: InkWell(
                   child: SizedBox(
-                    width: 180,
+                    width: 170,
                     height: 100,
                     child: Text(
                       "El Instituto Tecnológico de Ensenada, del TecNM, el día 16 de marzo de 2022, realizó la evaluación para conforma formar el equipo representativo Albatros",

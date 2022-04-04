@@ -11,10 +11,13 @@ class Button extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return AlertDialog(
-                title: const Text("Espera amigo/a"),
+                title: const Text("Información general"),
                 content: SingleChildScrollView(
                   child: ListBody(
-                    children: const [Text("ahorita te digo la info :)")],
+                    children: const [
+                      Text(
+                          "Coordinador Acádemico\n Josefina Campos García\n coord_eia@ite.edu.mx\n 6461775680 ext. 1063")
+                    ],
                   ),
                 ),
                 actions: [
