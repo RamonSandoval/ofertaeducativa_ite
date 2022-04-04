@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:ofertaeducativa_ite/widgets/button.dart';
 import 'package:ofertaeducativa_ite/widgets/carousel.dart';
@@ -51,6 +53,7 @@ class Tabss extends StatelessWidget {
                     "Especialización en industria Aeroespacial",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
+                  const SizedBox(height: 15),
                   Row(
                     children: [Fotos()],
                   ),
