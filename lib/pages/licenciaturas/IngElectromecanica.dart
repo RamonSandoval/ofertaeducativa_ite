@@ -14,8 +14,11 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('TECNM'),
+      ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
