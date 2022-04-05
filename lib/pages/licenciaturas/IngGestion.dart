@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:ofertaeducativa_ite/pages/licenciaturas/IngElectromecanica.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 
@@ -130,6 +131,12 @@ class _IngGestionState extends State<IngGestion> {
                   ),
                   
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => TripticoGestion());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -150,6 +157,7 @@ class _IngGestionState extends State<IngGestion> {
                           textAlign: TextAlign.center,
                         ),
                       ),
+                    ),
                     ),
                   ),
                 ],
@@ -255,6 +263,24 @@ class _IngGestionState extends State<IngGestion> {
           ),
         ),
       ),
+    );
+  }
+}
+
+
+
+class TripticoGestion extends StatelessWidget {
+  const TripticoGestion({Key? key}) : super(key: key);
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Tríptico'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/tripticogestion.pdf'),
+          
     );
   }
 }
