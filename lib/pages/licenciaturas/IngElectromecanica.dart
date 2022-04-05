@@ -1,7 +1,11 @@
 // ignore_for_file: deprecated_member_use
+
+import 'dart:io';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class IngElectromecanica extends StatefulWidget {
   const IngElectromecanica({Key? key}) : super(key: key);
@@ -18,7 +22,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
         title: Text('TECNM'),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
@@ -36,7 +40,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
               const Image(
                 image: AssetImage(
                     'assets/licenciaturas/Electromecanica/electromecanica.jpeg'),
-                fit: BoxFit.contain,
+                width: 350,
               ),
               const SizedBox(
                 height: 30,
@@ -233,6 +237,32 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
               ),
               const SizedBox(
                 height: 30,
+              ),
+              Card(
+                child: InkWell(
+                  onTap: () async {},
+                  child: Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(0),
+                        image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: NetworkImage(
+                                'https://img.youtube.com/vi/_-Fsq3_jjh4/0.jpg'))),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                        "El TecNM campus Ensenada, oferta Ingeniería Electrónica.",
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ),
+                ),
               ),
               SizedBox(
                 width: double.infinity,
