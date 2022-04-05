@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
+
 class IngGestion extends StatefulWidget {
   const IngGestion({Key? key}) : super(key: key);
 
@@ -261,14 +262,14 @@ class _IngGestionState extends State<IngGestion> {
 class Triptico extends StatelessWidget {
   const Triptico({Key? key}) : super(key: key);
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Reticula'),
       ),
-      body: SfPdfViewer.asset(
-          '../../lib/assets/pdf_files/licenciaturas/Gestion/perfilIngreso.pdf'),
+      body: SfPdfViewer.network(
+          'https://drive.google.com/file/d/12KaIlnvZHVfGtNZ4WGEwKM09DDGM5vZV/'),
     );
   }
 }
