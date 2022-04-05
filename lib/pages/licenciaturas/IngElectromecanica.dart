@@ -18,7 +18,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
         title: Text('TECNM'),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
@@ -34,9 +34,9 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 height: 20,
               ),
               const Image(
-                image: NetworkImage(
-                    "https://scontent.ftij3-1.fna.fbcdn.net/v/t1.15752-9/276945424_524378199226203_3964615856520026247_n.png?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH4ZwjZRo3NEY2c-_XxEhUnAcs8M8fDqcgByzwzx8OpyBf2lm_1zijLxpsAE2bFjcy5_iMaR7ZYrUtm8WPzPegz&_nc_ohc=0Z02aI3-WqoAX8mgKwA&tn=S0CbBv9_BvGZ7_m3&_nc_ht=scontent.ftij3-1.fna&oh=03_AVIjw4A3ruSH6iQLTlZFtgK94EA9TjER4g3yADRTIiZwpw&oe=626FAA2B"),
-                width: 350,
+                image: AssetImage(
+                    'assets/licenciaturas/Electromecanica/electromecanica.jpeg'),
+                fit: BoxFit.contain,
               ),
               const SizedBox(
                 height: 30,
@@ -126,24 +126,31 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                     ),
                   ),
                   Card(
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Tríptico",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Tríptico",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),
@@ -200,6 +207,24 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                     ),
                     const Text(
                       "Formar profesionista de excelencia en ingeniería electromecánica, con actitud emprendedora, con liderazgo, y capacidad para analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica. Considerando las normas estándares nacionales e internacionales para fomentar el desarrollo sustentable con plena conciencia ética, humanística y social.",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "\u{1F9E2} Modalidad",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Escolarizada horario de lunes a viernes",
                       style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.justify,
                     ),
@@ -262,7 +287,7 @@ class Triptico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reticula'),
+        title: Text('Triptico'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Electromecanica/tripticoelectro.pdf'),
