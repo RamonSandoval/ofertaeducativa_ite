@@ -64,6 +64,7 @@ flutter:
     - images/logo.png
   #pdfs
     - assets/licenciaturas/Electromecanica/tripticoelectro.pdf
+    - assets/licenciaturas/Electromecanica/tripticoelectro.pdf
     - assets/licenciaturas/Gestion/perfilIngreso.pdf
     - assets/licenciaturas/Gestion/tripticogestion.pdf
     - assets/licenciaturas/Gestion/perfilegreso.pdf
