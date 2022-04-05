@@ -7,7 +7,6 @@ import 'package:ofertaeducativa_ite/pages/licenciaturas/IngGestion.dart';
 import 'package:ofertaeducativa_ite/pages/posgrados/especializacion.dart';
 import 'package:ofertaeducativa_ite/routes/routes.dart';
 
-
 abstract class MovPage {
   static Map<String, Widget Function(BuildContext)> route = {
     Routes.Home_page: (BuildContext context) => const HomePage(),
@@ -15,6 +14,6 @@ abstract class MovPage {
     Routes.ingGestion: (BuildContext context) => const IngGestion(),
     Routes.IngElectronica: (BuildContext context) => const IngElectronica(),
     Routes.Especializaion: (BuildContext context) => Especializacion(),
-    Routes.ingIndustrial: (BuildContext context) => const IngIndrustrial(),
+    //Routes.ingIndustrial: (BuildContext context) => const IngIndrustrial(),
   };
 }

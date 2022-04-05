@@ -19,21 +19,13 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TECNM'),
+        title: Text('Ingenieria Electromecánica'),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 0, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
-              const Text(
-                "Ingeniería Electromecánica",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.black,
-                ),
-              ),
               const SizedBox(
                 height: 20,
               ),
@@ -242,11 +234,11 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 child: InkWell(
                   onTap: () async {
                     const url = 'https://youtu.be/_-Fsq3_jjh4 ';
-                      if(await canLaunch(url)){
-                        await launch(url);
-                      }else {
-                        throw 'Could not launch $url';
-                      }
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
                   },
                   child: Container(
                     width: double.infinity,
