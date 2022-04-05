@@ -49,7 +49,7 @@ class _IngGestionState extends State<IngGestion> {
                     child: InkWell(
                      onTap: () {
                         Route route =
-                            MaterialPageRoute(builder: (__) => Triptico());
+                            MaterialPageRoute(builder: (__) => PerfilIngreso());
                         Navigator.push(context, route);
                       }, 
                       
@@ -259,14 +259,14 @@ class _IngGestionState extends State<IngGestion> {
   }
 }
 
-class Triptico extends StatelessWidget {
-  const Triptico({Key? key}) : super(key: key);
+class PerfilIngreso extends StatelessWidget {
+  const PerfilIngreso({Key? key}) : super(key: key);
 
    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reticula'),
+        title: Text('Perfil de ingreso'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Gestion/perfilIngreso.pdf'),
