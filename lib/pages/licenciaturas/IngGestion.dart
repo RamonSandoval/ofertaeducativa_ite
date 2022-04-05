@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:ofertaeducativa_ite/pages/licenciaturas/IngElectromecanica.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 
 class IngGestion extends StatefulWidget {
@@ -233,6 +235,39 @@ class _IngGestionState extends State<IngGestion> {
               ),
               const SizedBox(
                 height: 30,
+              ),
+              Card(
+                child: InkWell(
+                  onTap: () async {
+                    const url = 'https://youtu.be/_-Fsq3_jjh4 ';
+                      if(await canLaunch(url)){
+                        await launch(url);
+                      }else {
+                        throw 'Could not launch $url';
+                      }
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(0),
+                        image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: NetworkImage(
+                                'https://img.youtube.com/vi/_-Fsq3_jjh4/0.jpg'))),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                        "El TecNM campus Ensenada, oferta Ingeniería Electrónica.",
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ),
+                ),
               ),
               SizedBox(
                 width: double.infinity,

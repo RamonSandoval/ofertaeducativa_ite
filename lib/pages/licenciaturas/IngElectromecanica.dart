@@ -241,7 +241,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
               Card(
                 child: InkWell(
                   onTap: () async {
-                    const url = 'https://youtu.be/_-Fsq3_jjh4';
+                    const url = 'https://youtu.be/_-Fsq3_jjh4 ';
                       if(await canLaunch(url)){
                         await launch(url);
                       }else {
