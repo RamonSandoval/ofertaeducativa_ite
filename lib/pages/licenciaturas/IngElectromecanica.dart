@@ -45,24 +45,31 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Perfil de ingreso",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Perfil de ingreso",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),
@@ -258,7 +265,7 @@ class Triptico extends StatelessWidget {
         title: Text('Reticula'),
       ),
       body: SfPdfViewer.network(
-          'https://tijuana.tecnm.mx/wp-content/uploads/2017/12/Reticula_Ingenieria_Electromecanica.pdf'),
+          'https://www.foroconsultivo.org.mx/INCyTU/documentos/Completa/INCYTU_18-012.pdf'),
     );
   }
 }
