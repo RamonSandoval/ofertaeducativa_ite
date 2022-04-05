@@ -189,7 +189,7 @@ class _IngIndustrialState extends State<IngIndustrial> {
                       ],
                     ),
                     const Text(
-                      "Formar profesionales que contribuyan a la gestión de empresas e innovación de procesos; así como al diseño, implementación y desarrollo de sistemas estratégicos de negocios, optimizando recursos en un entorno global, con ética y responsabilidad social.",
+                      "Formar profesionales, éticos, líderes, creativos y emprendedores en el área de  Ingeniería Industrial; competente para diseñar, implantar, administrar, innovar y optimizar sistemas de producción de bienes y servicios; con enfoque sistémico y sustentable en un entorno global.",
                       style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.justify,
                     ),
@@ -206,7 +206,7 @@ class _IngIndustrialState extends State<IngIndustrial> {
                       ],
                     ),
                     const Text(
-                      "Ser los mejores formadores de ingenieros en gestión empresarial, lideres en el desarrollo continuo de los sectores productivos de la región correspondiendo de manera integral y eficaz a las necesidades del entorno.",
+                      "Ser un programa acreditado y reconocido en el ámbito regional, nacional e internacional que genere profesionistas de alto desempeño con sentido de la ética y el desarrollo sustentable.",
                       style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.justify,
                     ),
@@ -224,7 +224,7 @@ class _IngIndustrialState extends State<IngIndustrial> {
                       ],
                     ),
                     const Text(
-                      "Formar profesionistas promotores del cambio social con formación integral y de excelencia en el campo de las finanzas, contabilidad, auditoria y emprendimiento; alineados al marco regulatorio y la realidad socioeconómica del país, capaces de proponer soluciones efectivas a los retos de la globalización cada vez más dinámicos.",
+                      "Programa de formación integral y continua que forma especialistas en ingeniería Industrial y sus áreas disciplinarias, desarrollando competencias para la gestión y desarrollo de productos y servicios acorde a las tendencias tecnológicas y del mercado, bajo el enfoque de sustentabilidad y el marco de la ética.",
                       style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.justify,
                     ),
@@ -280,7 +280,7 @@ class _IngIndustrialState extends State<IngIndustrial> {
                               child: ListBody(
                                 children: const [
                                   Text(
-                                      "Jefe del Departamento de Ciencias Económico-Administrativo\nJuan Manuel Espinoza Figueroa\nCorreo: cead_ensenada@tecnm.mx\n\nCoordinadora de carrera\nVayra Valeria Medina Felix \nCorreo: coord_gestion@ite.edu.mx")
+                                      "Jefa del Departamento de Ingeniería Industrial\nArely Murillo Silva\nCorreo: ing_ensenada@tecnm.mx\nTeléfono: 646 1775680 ext. 2018\n\n\nCoordinadora de carrera\nSarahí Castaños Lafarga \nCorreo: coord_industrial@ite.edu.mx")
                                 ],
                               ),
                             ),
