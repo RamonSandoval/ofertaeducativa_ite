@@ -323,7 +323,7 @@ class Reticula extends StatelessWidget {
         title: Text('Logística Empresarial '),
       ),
       body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/reticula.pdf'),
+          'assets/licenciaturas/Industrial/reticula.pdf'),
           
     );
   }
@@ -339,7 +339,7 @@ class PerfilEgreso extends StatelessWidget {
         title: Text('Perfil de egreso'),
       ),
       body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/perfilegreso.pdf'),
+          'assets/licenciaturas/Industrial/perfilEgreso.pdf'),
           
     );
   }
@@ -355,7 +355,7 @@ class TripticoGestion extends StatelessWidget {
         title: Text('Tríptico'),
       ),
       body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/tripticogestion.pdf'),
+          'assets/licenciaturas/Industrial/triptico.pdf'),
           
     );
   }
@@ -371,7 +371,7 @@ class PerfilIngreso extends StatelessWidget {
         title: Text('Perfil de ingreso'),
       ),
       body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/perfilIngreso.pdf'),
+          'assets/licenciaturas/Industrial/perfilIngreso.pdf'),
     );
   }
 }
