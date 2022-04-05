@@ -77,8 +77,7 @@ class Drawers extends StatelessWidget {
                         submenuContent: const Text("Ing. Electromecánica",
                             style: TextStyle(color: Colors.white)),
                         onClick: () {
-                          Navigator.popAndPushNamed(
-                              context, Routes.ingEle);
+                          Navigator.popAndPushNamed(context, Routes.ingEle);
                         }),
                     MLSubmenu(
                         submenuContent: const Text("Ing. Electrónica",
@@ -95,7 +94,9 @@ class Drawers extends StatelessWidget {
                     MLSubmenu(
                         submenuContent: const Text("Posgrados",
                             style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
+                        onClick: () {
+                          Navigator.popAndPushNamed(context, Routes.ingEle);
+                        }),
                     MLSubmenu(
                         submenuContent: const Text(
                             "Especialización en Industrial Aeroespacials",

@@ -264,8 +264,8 @@ class Triptico extends StatelessWidget {
       appBar: AppBar(
         title: Text('Reticula'),
       ),
-      body: SfPdfViewer.network(
-          'https://www.foroconsultivo.org.mx/INCyTU/documentos/Completa/INCYTU_18-012.pdf'),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electromecanica/tripticoelectro.pdf'),
     );
   }
 }
