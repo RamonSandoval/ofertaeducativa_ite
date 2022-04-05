@@ -78,6 +78,12 @@ class _IngGestionState extends State<IngGestion> {
                     ),
                   ),
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -99,6 +105,7 @@ class _IngGestionState extends State<IngGestion> {
                         ),
                       ),
                     ),
+                    ),
                   ),
                 ],
               ),
@@ -106,6 +113,12 @@ class _IngGestionState extends State<IngGestion> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
+                    child: InkWell(
+                     onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Reticula());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -127,7 +140,7 @@ class _IngGestionState extends State<IngGestion> {
                         ),
                        ),
                     ),
-                    
+                    ),
                   ),
                   
                   Card(
@@ -267,7 +280,37 @@ class _IngGestionState extends State<IngGestion> {
   }
 }
 
+class Reticula extends StatelessWidget {
+  const Reticula({Key? key}) : super(key: key);
 
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Logística Empresarial '),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/reticula.pdf'),
+          
+    );
+  }
+}
+
+class PerfilEgreso extends StatelessWidget {
+  const PerfilEgreso({Key? key}) : super(key: key);
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Perfil de egreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/perfilegreso.pdf'),
+          
+    );
+  }
+}
 
 class TripticoGestion extends StatelessWidget {
   const TripticoGestion({Key? key}) : super(key: key);
