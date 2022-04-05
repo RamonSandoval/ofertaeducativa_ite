@@ -6,6 +6,7 @@ import 'package:ofertaeducativa_ite/pages/licenciaturas/IngGestion.dart';
 import 'package:ofertaeducativa_ite/pages/posgrados/especializacion.dart';
 import 'package:ofertaeducativa_ite/routes/routes.dart';
 
+
 abstract class MovPage {
   static Map<String, Widget Function(BuildContext)> route = {
     Routes.Home_page: (BuildContext context) => const HomePage(),

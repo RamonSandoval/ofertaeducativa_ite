@@ -45,6 +45,13 @@ class _IngGestionState extends State<IngGestion> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
+                    child: InkWell(
+                     onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
+                      }, 
+                      
                     child: Container(
                       width: 160,
                       height: 130,
@@ -65,6 +72,7 @@ class _IngGestionState extends State<IngGestion> {
                           textAlign: TextAlign.center,
                         ),
                       ),
+                    ),
                     ),
                   ),
                   Card(
@@ -115,9 +123,11 @@ class _IngGestionState extends State<IngGestion> {
                               color: Colors.white),
                           textAlign: TextAlign.center,
                         ),
-                      ),
+                       ),
                     ),
+                    
                   ),
+                  
                   Card(
                     child: Container(
                       width: 160,
@@ -257,8 +267,9 @@ class Triptico extends StatelessWidget {
       appBar: AppBar(
         title: Text('Reticula'),
       ),
-      body: SfPdfViewer.network(
-          'https://tijuana.tecnm.mx/wp-content/uploads/2017/12/Reticula_Ingenieria_Electromecanica.pdf'),
+      body: SfPdfViewer.asset(
+          '../../lib/assets/pdf_files/licenciaturas/Gestion/perfilIngreso.pdf'),
     );
   }
 }
+

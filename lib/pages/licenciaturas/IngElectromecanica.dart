@@ -174,7 +174,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                     Row(
                       children: const [
                         Text(
-                          "\u{2692} Misión",
+                          "\u{2692} Mision",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
