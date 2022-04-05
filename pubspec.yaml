@@ -28,7 +28,6 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   multilevel_drawer: ^2.0.0
-  flutter_boom_menu: ^1.0.2
 
   flutter:
     sdk: flutter
