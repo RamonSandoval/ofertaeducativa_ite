@@ -63,6 +63,7 @@ flutter:
     - assets/licenciaturas/Electromecanica/electromecanica.jpeg
   #pdfs
     - assets/licenciaturas/Electromecanica/tripticoelectro.pdf
+    - assets/licenciaturas/Gestion/perfilIngreso.pdf
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

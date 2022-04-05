@@ -268,8 +268,8 @@ class Triptico extends StatelessWidget {
       appBar: AppBar(
         title: Text('Reticula'),
       ),
-      body: SfPdfViewer.network(
-          'https://drive.google.com/file/d/12KaIlnvZHVfGtNZ4WGEwKM09DDGM5vZV/'),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/perfilIngreso.pdf'),
     );
   }
 }
