@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:ofertaeducativa_ite/pages/licenciaturas/IngElectromecanica.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 
@@ -49,7 +50,7 @@ class _IngGestionState extends State<IngGestion> {
                     child: InkWell(
                      onTap: () {
                         Route route =
-                            MaterialPageRoute(builder: (__) => Triptico());
+                            MaterialPageRoute(builder: (__) => PerfilIngreso());
                         Navigator.push(context, route);
                       }, 
                       
@@ -77,6 +78,12 @@ class _IngGestionState extends State<IngGestion> {
                     ),
                   ),
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -98,6 +105,7 @@ class _IngGestionState extends State<IngGestion> {
                         ),
                       ),
                     ),
+                    ),
                   ),
                 ],
               ),
@@ -105,6 +113,12 @@ class _IngGestionState extends State<IngGestion> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
+                    child: InkWell(
+                     onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Reticula());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -126,10 +140,16 @@ class _IngGestionState extends State<IngGestion> {
                         ),
                        ),
                     ),
-                    
+                    ),
                   ),
                   
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => TripticoGestion());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -150,6 +170,7 @@ class _IngGestionState extends State<IngGestion> {
                           textAlign: TextAlign.center,
                         ),
                       ),
+                    ),
                     ),
                   ),
                 ],
@@ -259,14 +280,62 @@ class _IngGestionState extends State<IngGestion> {
   }
 }
 
-class Triptico extends StatelessWidget {
-  const Triptico({Key? key}) : super(key: key);
+class Reticula extends StatelessWidget {
+  const Reticula({Key? key}) : super(key: key);
 
    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reticula'),
+        title: Text('Logística Empresarial '),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/reticula.pdf'),
+          
+    );
+  }
+}
+
+class PerfilEgreso extends StatelessWidget {
+  const PerfilEgreso({Key? key}) : super(key: key);
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Perfil de egreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/perfilegreso.pdf'),
+          
+    );
+  }
+}
+
+class TripticoGestion extends StatelessWidget {
+  const TripticoGestion({Key? key}) : super(key: key);
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Tríptico'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/tripticogestion.pdf'),
+          
+    );
+  }
+}
+
+class PerfilIngreso extends StatelessWidget {
+  const PerfilIngreso({Key? key}) : super(key: key);
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Perfil de ingreso'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Gestion/perfilIngreso.pdf'),
