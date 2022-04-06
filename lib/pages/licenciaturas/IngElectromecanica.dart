@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
@@ -16,16 +17,23 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ingenieria Electromecánica'),
+        title: Text('Ingenieria Electromecánica',
+          style: GoogleFonts.montserrat(),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
+          
           child: Column(children: [
-            const Image(
-              image: AssetImage(
+             ClipRRect(
+               borderRadius: BorderRadius.circular(8.0),
+            // ignore: prefer_const_constructors
+            child: Image(
+              image: const AssetImage(
                   'assets/licenciaturas/Electromecanica/electromecanica.jpeg'),
               width: 350,
+            ),
             ),
             const SizedBox(
               height: 15,
@@ -40,7 +48,11 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       height: 36,
                     )),
               ),
-              const Text("Acerca de la Ingeniería"),
+               Text(
+                "Acerca de la Ingeniería",
+                textAlign: TextAlign.justify,
+                    style: GoogleFonts.montserrat(),
+                ),
               Expanded(
                 child: Container(
                     margin: const EdgeInsets.only(left: 20.0, right: 10.0),
@@ -74,12 +86,12 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                               fit: BoxFit.cover,
                               image: NetworkImage(
                                   'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
-                      child: const Padding(
+                      child:  Padding(
                         padding: EdgeInsets.all(10.0),
                         child: Text(
                           "Perfil de Ingreso",
-                          style: TextStyle(
-                              fontSize: 18,
+                          
+                          style: GoogleFonts.montserrat(fontSize: 18,
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
                           textAlign: TextAlign.center,
@@ -104,14 +116,13 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                             fit: BoxFit.cover,
                             image: NetworkImage(
                                 'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
-                    child: const Padding(
+                    child:  Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
                         "Perfil de Egreso",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white),
+                        style: GoogleFonts.montserrat(fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -139,14 +150,13 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                             fit: BoxFit.cover,
                             image: NetworkImage(
                                 'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
-                    child: const Padding(
+                    child:  Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
                         "Retícula",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white),
+                        style: GoogleFonts.montserrat(fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -169,12 +179,11 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                               fit: BoxFit.cover,
                               image: NetworkImage(
                                   'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
-                      child: const Padding(
+                      child:  Padding(
                         padding: EdgeInsets.only(top: 90),
                         child: Text(
                           "Tríptico",
-                          style: TextStyle(
-                              fontSize: 18,
+                          style: GoogleFonts.montserrat(fontSize: 18,
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
                           textAlign: TextAlign.center,
@@ -191,34 +200,45 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                 children: [
                   Row(
                     children: const [
-                      Text(
-                        "\u{1F396} Objetivo",
+                      Icon(
+                        Icons.adjust_outlined,
+                      ),
+                      Text(  
+                        "Objetivo",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),
-                  const Text(
+                  Text(
                     "Formar profesionistas de excelencia en Ingeniería Electromecánica, con actitud emprendedora, liderazgo y capacidad de: analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica, considerando las normas y estándares nacionales e internacionales de forma sustentable con plena conciencia ética, humanística y social.",
-                    style: TextStyle(fontSize: 16),
+                    
                     textAlign: TextAlign.justify,
-                  ),
+                    style: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      ),
+                   ),
                   const SizedBox(
                     height: 30,
                   ),
                   Row(
                     children: const [
+                      Icon(
+                        Icons.engineering_outlined,
+                      ),
                       Text(
-                        "\u{2692} Mision",
+                        "Mision",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),
-                  const Text(
+                   Text(
                     "Ser una institución de educación superior formadora de profesionistas en ingeniería electromecánica, capaces de promover el desarrollo sostenido, sustentable y equitativo en la región.",
-                    style: TextStyle(fontSize: 16),
                     textAlign: TextAlign.justify,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      ),
                   ),
                   const SizedBox(
                     height: 30,
@@ -226,17 +246,22 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
+                      Icon(
+                        Icons.remove_red_eye_outlined,
+                      ),
                       Text(
-                        "\u{1F9E2} Vision",
+                        "Vision",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),
-                  const Text(
+                   Text(
                     "Formar profesionista de excelencia en ingeniería electromecánica, con actitud emprendedora, con liderazgo, y capacidad para analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica. Considerando las normas estándares nacionales e internacionales para fomentar el desarrollo sustentable con plena conciencia ética, humanística y social.",
-                    style: TextStyle(fontSize: 16),
                     textAlign: TextAlign.justify,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      ),
                   ),
                   const SizedBox(
                     height: 30,
@@ -244,17 +269,23 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
+                      Icon(
+                        Icons.watch_later_outlined,
+                      ),
                       Text(
-                        "\u{1F9E2} Modalidad",
+
+                        "Modalidad",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),
-                  const Text(
+                  Text(
                     "Escolarizada horario de lunes a viernes",
-                    style: TextStyle(fontSize: 16),
                     textAlign: TextAlign.justify,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      ),
                   ),
                 ],
               ),
@@ -273,12 +304,16 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title: const Text("Informacion de Contacto"),
+                          title:  Text("Informacion de Contacto",
+                            style: GoogleFonts.montserrat(),
+                          ),
                           content: SingleChildScrollView(
                             child: ListBody(
-                              children: const [
-                                Text(
-                                    "Jefe del Departamento de Ingeniería Eléctrica y Electrónica\nFrancisco Ramos Flores\nCorreo: diee@ite.edu.mx\nTeléfono: 646 177 5680 ext. 2010\n\nCoordinadora de carrera\nVayra Valeria Medina Felix \nCorreo: coord_electromecanica@ite.edu.mx")
+                              children:  [
+                              Text(
+                                    "Jefe del Departamento de Ingeniería Eléctrica y Electrónica\nFrancisco Ramos Flores\nCorreo: diee@ite.edu.mx\nTeléfono: 646 177 5680 ext. 2010\n\nCoordinadora de carrera\nVayra Valeria Medina Felix \nCorreo: coord_electromecanica@ite.edu.mx",    
+                                style: GoogleFonts.montserrat(),
+                              )
                               ],
                             ),
                           ),
@@ -293,9 +328,9 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                         );
                       });
                 },
-                child: const Text(
+                child: Text(
                   'Informacion de Contacto',
-                  style: TextStyle(color: Colors.white),
+                  style: GoogleFonts.montserrat(color: Colors.white),
                 ),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
