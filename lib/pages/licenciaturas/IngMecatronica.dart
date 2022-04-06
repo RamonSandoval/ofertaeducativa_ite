@@ -41,7 +41,7 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                     child: InkWell(
                       onTap: () {
                         Route route =
-                            MaterialPageRoute(builder: (__) => Triptico());
+                            MaterialPageRoute(builder: (__) => PerfilIngreso());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -56,7 +56,7 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                         child: const Padding(
                           padding: EdgeInsets.all(10.0),
                           child: Text(
-                            "Perfil de ingreso",
+                            "Perfil de Ingreso",
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
@@ -68,6 +68,12 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                     ),
                   ),
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -89,6 +95,7 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                         ),
                       ),
                     ),
+                    ),
                   ),
                 ],
               ),
@@ -96,6 +103,12 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Reticula());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -116,6 +129,7 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                           textAlign: TextAlign.center,
                         ),
                       ),
+                    ),
                     ),
                   ),
                   Card(
@@ -321,10 +335,52 @@ class Triptico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Triptico'),
+        title: Text('Tríptico'),
       ),
       body: SfPdfViewer.asset(
-          'assets/licenciaturas/Electromecanica/tripticoelectro.pdf'),
+          'assets/licenciaturas/Mecatronica/triptico.pdf'),
+    );
+  }
+}
+class PerfilIngreso extends StatelessWidget {
+  const PerfilIngreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Perfil de Ingreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Mecatronica/perfilingreso.pdf'),
+    );
+  }
+}
+class PerfilEgreso extends StatelessWidget {
+  const PerfilEgreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Perfil de Egreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Mecatronica/perfilegreso.pdf'),
+    );
+  }
+}
+class Reticula extends StatelessWidget {
+  const Reticula({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Retícula'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Mecatronica/reticula.pdf'),
     );
   }
 }

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+
+
 class IngGestion extends StatefulWidget {
   const IngGestion({Key? key}) : super(key: key);
 
@@ -15,35 +17,36 @@ class _IngGestionState extends State<IngGestion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Ingenieria en Gestión Empresarial',
-          style: TextStyle(fontSize: 18),
-        ),
+        title: Text('Gestión Empresarial'),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
-          child: Column(children: [
-            const SizedBox(
-              height: 20,
-            ),
-            const Image(
-              image: AssetImage('assets/licenciaturas/Gestion/gestion.jpg'),
-              width: 350,
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Route route = MaterialPageRoute(
-                          builder: (__) => const PerfilIngreso());
-                      Navigator.push(context, route);
-                    },
+          child: Container(
+            child: Column(children: [
+              
+              const SizedBox(
+                height: 20,
+              ),
+              const Image(
+                image: NetworkImage(
+                    "https://scontent.ftij3-1.fna.fbcdn.net/v/t1.15752-9/276945424_524378199226203_3964615856520026247_n.png?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH4ZwjZRo3NEY2c-_XxEhUnAcs8M8fDqcgByzwzx8OpyBf2lm_1zijLxpsAE2bFjcy5_iMaR7ZYrUtm8WPzPegz&_nc_ohc=0Z02aI3-WqoAX8mgKwA&tn=S0CbBv9_BvGZ7_m3&_nc_ht=scontent.ftij3-1.fna&oh=03_AVIjw4A3ruSH6iQLTlZFtgK94EA9TjER4g3yADRTIiZwpw&oe=626FAA2B"),
+                width: 350,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Card(
+                    child: InkWell(
+                     onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => PerfilIngreso());
+                        Navigator.push(context, route);
+                      }, 
+                      
                     child: Container(
                       width: 160,
                       height: 130,
@@ -65,15 +68,15 @@ class _IngGestionState extends State<IngGestion> {
                         ),
                       ),
                     ),
+                    ),
                   ),
-                ),
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Route route = MaterialPageRoute(
-                          builder: (__) => const PerfilEgreso());
-                      Navigator.push(context, route);
-                    },
+                  Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -95,20 +98,20 @@ class _IngGestionState extends State<IngGestion> {
                         ),
                       ),
                     ),
+                    ),
                   ),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Route route =
-                          MaterialPageRoute(builder: (__) => const Reticula());
-                      Navigator.push(context, route);
-                    },
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Card(
+                    child: InkWell(
+                     onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Reticula());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -128,17 +131,18 @@ class _IngGestionState extends State<IngGestion> {
                               color: Colors.white),
                           textAlign: TextAlign.center,
                         ),
-                      ),
+                       ),
+                    ),
                     ),
                   ),
-                ),
-                Card(
-                  child: InkWell(
-                    onTap: () {
-                      Route route = MaterialPageRoute(
-                          builder: (__) => const TripticoGestion());
-                      Navigator.push(context, route);
-                    },
+                  
+                  Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => TripticoGestion());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -160,167 +164,142 @@ class _IngGestionState extends State<IngGestion> {
                         ),
                       ),
                     ),
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
-              child: Column(
-                children: [
-                  Row(
-                    children: const [
-                      Text(
-                        "\u{1F396} Objetivo",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
-                  const Text(
-                    "Formar profesionales que contribuyan a la gestión de empresas e innovación de procesos; así como al diseño, implementación y desarrollo de sistemas estratégicos de negocios, optimizando recursos en un entorno global, con ética y responsabilidad social.",
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.justify,
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Row(
-                    children: const [
-                      Text(
-                        "\u{2692} Mision",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
-                  const Text(
-                    "Ser los mejores formadores de ingenieros en gestión empresarial, lideres en el desarrollo continuo de los sectores productivos de la región correspondiendo de manera integral y eficaz a las necesidades del entorno.",
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.justify,
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "\u{1F9E2} Vision",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
-                  const Text(
-                    "Formar profesionistas promotores del cambio social con formación integral y de excelencia en el campo de las finanzas, contabilidad, auditoria y emprendimiento; alineados al marco regulatorio y la realidad socioeconómica del país, capaces de proponer soluciones efectivas a los retos de la globalización cada vez más dinámicos.",
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.justify,
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: const [
-                      Text(
-                        "\u{1F9E2} Modalidad",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
-                  const Text(
-                    "Escolarizada horario de lunes a viernes\nSemipresencial horario de viernes y sábado",
-                    style: TextStyle(fontSize: 16),
-                    textAlign: TextAlign.justify,
+                    ),
                   ),
                 ],
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Text('Video promocional',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: Color.fromARGB(217, 27, 57, 106))),
-            Card(
-              child: InkWell(
-                onTap: () async {
-                  const url = 'https://www.youtube.com/watch?v=t-1ILO5DmJ4 ';
-                  if (await canLaunch(url)) {
-                    await launch(url);
-                  } else {
-                    throw 'Could not launch $url';
-                  }
-                },
-                child: Container(
-                  width: double.infinity,
-                  height: 200,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(0),
-                      image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: NetworkImage(
-                              'https://img.youtube.com/vi/t-1ILO5DmJ4/0.jpg'))),
-                  child: const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Text(
-                      "El TecNM campus Ensenada, oferta Ingeniería en Gestión Empresarial.",
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white),
-                      textAlign: TextAlign.left,
+              Padding(
+                padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
+                child: Column(
+                  children: [
+                    Row(
+                      children: const [
+                        Text(
+                          "\u{1F396} Objetivo",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Formar profesionales que contribuyan a la gestión de empresas e innovación de procesos; así como al diseño, implementación y desarrollo de sistemas estratégicos de negocios, optimizando recursos en un entorno global, con ética y responsabilidad social.",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      children: const [
+                        Text(
+                          "\u{2692} Mision",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Ser los mejores formadores de ingenieros en gestión empresarial, lideres en el desarrollo continuo de los sectores productivos de la región correspondiendo de manera integral y eficaz a las necesidades del entorno.",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "\u{1F9E2} Vision",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Formar profesionistas promotores del cambio social con formación integral y de excelencia en el campo de las finanzas, contabilidad, auditoria y emprendimiento; alineados al marco regulatorio y la realidad socioeconómica del país, capaces de proponer soluciones efectivas a los retos de la globalización cada vez más dinámicos.",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Card(
+                child: InkWell(
+                  onTap: () async {
+                    const url = 'https://youtu.be/_-Fsq3_jjh4 ';
+                      if(await canLaunch(url)){
+                        await launch(url);
+                      }else {
+                        throw 'Could not launch $url';
+                      }
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(0),
+                        image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: NetworkImage(
+                                'https://img.youtube.com/vi/_-Fsq3_jjh4/0.jpg'))),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                        "El TecNM campus Ensenada, oferta Ingeniería Electrónica.",
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white),
+                        textAlign: TextAlign.left,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () {
-                  showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: const Text("Informacion de Contacto"),
-                          content: SingleChildScrollView(
-                            child: ListBody(
-                              children: const [
-                                Text(
-                                    "Jefe del Departamento de Ciencias Económico-Administrativo\nJuan Manuel Espinoza Figueroa\nCorreo: cead_ensenada@tecnm.mx\n\nCoordinadora de carrera\nVayra Valeria Medina Felix \nCorreo: coord_gestion@ite.edu.mx")
-                              ],
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text("Informacion de Contacto"),
+                            content: SingleChildScrollView(
+                              child: ListBody(
+                                children: const [
+                                  Text(
+                                      "Jefe del Departamento de Ciencias Económico-Administrativo\nJuan Manuel Espinoza Figueroa\nCorreo: cead_ensenada@tecnm.mx\n\nCoordinadora de carrera\nVayra Valeria Medina Felix \nCorreo: coord_gestion@ite.edu.mx")
+                                ],
+                              ),
                             ),
-                          ),
-                          actions: [
-                            FlatButton(
-                              child: const Text("Aceptar"),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                            ),
-                          ],
-                        );
-                      });
-                },
-                child: const Text(
-                  'Informacion de Contacto',
-                  style: TextStyle(color: Colors.white),
-                ),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                      const Color.fromARGB(217, 27, 57, 106)),
+                            actions: [
+                              FlatButton(
+                                child: const Text("Aceptar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        });
+                  },
+                  child: const Text(
+                    'Informacion de Contacto',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(217, 27, 57, 106)),
+                  ),
                 ),
               ),
-            ),
-          ]),
+            ]),
+          ),
         ),
       ),
     );
@@ -330,13 +309,15 @@ class _IngGestionState extends State<IngGestion> {
 class Reticula extends StatelessWidget {
   const Reticula({Key? key}) : super(key: key);
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Logística Empresarial '),
+        title: Text('Logística Empresarial '),
       ),
-      body: SfPdfViewer.asset('assets/licenciaturas/Gestion/reticula.pdf'),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/reticula.pdf'),
+          
     );
   }
 }
@@ -344,13 +325,15 @@ class Reticula extends StatelessWidget {
 class PerfilEgreso extends StatelessWidget {
   const PerfilEgreso({Key? key}) : super(key: key);
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Perfil de egreso'),
+        title: Text('Perfil de Egreso'),
       ),
-      body: SfPdfViewer.asset('assets/licenciaturas/Gestion/perfilegreso.pdf'),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/perfilegreso.pdf'),
+          
     );
   }
 }
@@ -358,14 +341,15 @@ class PerfilEgreso extends StatelessWidget {
 class TripticoGestion extends StatelessWidget {
   const TripticoGestion({Key? key}) : super(key: key);
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tríptico'),
+        title: Text('Tríptico'),
       ),
-      body:
-          SfPdfViewer.asset('assets/licenciaturas/Gestion/tripticogestion.pdf'),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/tripticogestion.pdf'),
+          
     );
   }
 }
@@ -373,13 +357,15 @@ class TripticoGestion extends StatelessWidget {
 class PerfilIngreso extends StatelessWidget {
   const PerfilIngreso({Key? key}) : super(key: key);
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Perfil de ingreso'),
+        title: Text('Perfil de Ingreso'),
       ),
-      body: SfPdfViewer.asset('assets/licenciaturas/Gestion/perfilIngreso.pdf'),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Gestion/perfilIngreso.pdf'),
     );
   }
 }
+

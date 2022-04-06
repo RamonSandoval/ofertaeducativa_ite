@@ -37,7 +37,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   child: InkWell(
                     onTap: () {
                       Route route =
-                          MaterialPageRoute(builder: (__) => const Triptico());
+                          MaterialPageRoute(builder: (__) => PerfilIngreso());
                       Navigator.push(context, route);
                     },
                     child: Container(
@@ -52,7 +52,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       child: const Padding(
                         padding: EdgeInsets.all(10.0),
                         child: Text(
-                          "Perfil de ingreso",
+                          "Perfil de Ingreso",
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
@@ -64,6 +64,12 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   ),
                 ),
                 Card(
+                  child: InkWell(
+                    onTap: () {
+                      Route route =
+                          MaterialPageRoute(builder: (__) => PerfilEgreso());
+                      Navigator.push(context, route);
+                    },
                   child: Container(
                     width: 160,
                     height: 130,
@@ -76,7 +82,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                     child: const Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
-                        "Perfil de egreso",
+                        "Perfil de Egreso",
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
@@ -85,6 +91,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       ),
                     ),
                   ),
+                  ),
                 ),
               ],
             ),
@@ -92,6 +99,12 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Card(
+                  child: InkWell(
+                    onTap: () {
+                      Route route =
+                          MaterialPageRoute(builder: (__) => Reticula());
+                      Navigator.push(context, route);
+                    },
                   child: Container(
                     width: 160,
                     height: 130,
@@ -112,6 +125,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                  ),
                   ),
                 ),
                 Card(
@@ -282,6 +296,48 @@ class Triptico extends StatelessWidget {
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Electromecanica/tripticoelectro.pdf'),
+    );
+  }
+}
+class PerfilIngreso extends StatelessWidget {
+  const PerfilIngreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Perfil de Ingreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electromecanica/perfilingreso.pdf'),
+    );
+  }
+}
+class PerfilEgreso extends StatelessWidget {
+  const PerfilEgreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Perfil de Ingreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electromecanica/perfilegreso.pdf'),
+    );
+  }
+}
+class Reticula extends StatelessWidget {
+  const Reticula({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Reticula'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electromecanica/reticula.pdf'),
     );
   }
 }

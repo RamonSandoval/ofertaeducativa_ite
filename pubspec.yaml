@@ -71,7 +71,9 @@ flutter:
     - images/logo.png
   #pdfs
     - assets/licenciaturas/Electromecanica/tripticoelectro.pdf
-    - assets/licenciaturas/Electromecanica/tripticoelectro.pdf
+    - assets/licenciaturas/Electromecanica/perfilingreso.pdf
+    - assets/licenciaturas/Electromecanica/perfilegreso.pdf
+    - assets/licenciaturas/Electromecanica/reticula.pdf
     - assets/licenciaturas/Gestion/perfilIngreso.pdf
     - assets/licenciaturas/Gestion/tripticogestion.pdf
     - assets/licenciaturas/Gestion/perfilegreso.pdf
@@ -80,6 +82,22 @@ flutter:
     - assets/licenciaturas/Industrial/perfilEgreso.pdf
     - assets/licenciaturas/Industrial/reticula.pdf
     - assets/licenciaturas/Industrial/triptico.pdf
+    - assets/licenciaturas/Electronica/perfilingreso.pdf
+    - assets/licenciaturas/Electronica/perfilegreso.pdf
+    - assets/licenciaturas/Electronica/reticula.pdf
+    - assets/licenciaturas/Electronica/triptico.pdf
+    - assets/licenciaturas/Administracion/perfilingreso.pdf
+    - assets/licenciaturas/Administracion/perfilegreso.pdf
+    - assets/licenciaturas/Administracion/reticula.pdf
+    - assets/licenciaturas/Administracion/triptico.pdf
+    - assets/licenciaturas/Mecatronica/triptico.pdf
+    - assets/licenciaturas/Mecatronica/perfilingreso.pdf
+    - assets/licenciaturas/Mecatronica/perfilegreso.pdf
+    - assets/licenciaturas/Mecatronica/reticula.pdf
+    - assets/licenciaturas/Sistemas/reticula.pdf
+    - assets/licenciaturas/Sistemas/perfilingreso.pdf
+    - assets/licenciaturas/Sistemas/perfilegreso.pdf
+    - assets/licenciaturas/Sistemas/triptico.pdf
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
