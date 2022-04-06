@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
-
 class IngGestion extends StatefulWidget {
   const IngGestion({Key? key}) : super(key: key);
 
@@ -17,111 +15,111 @@ class _IngGestionState extends State<IngGestion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Gestión Empresarial'),
+        title: const Text('Gestión Empresarial'),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
-              
               const SizedBox(
                 height: 20,
               ),
-              const Image(
-                image: NetworkImage(
-                    "https://scontent.ftij3-1.fna.fbcdn.net/v/t1.15752-9/276945424_524378199226203_3964615856520026247_n.png?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeH4ZwjZRo3NEY2c-_XxEhUnAcs8M8fDqcgByzwzx8OpyBf2lm_1zijLxpsAE2bFjcy5_iMaR7ZYrUtm8WPzPegz&_nc_ohc=0Z02aI3-WqoAX8mgKwA&tn=S0CbBv9_BvGZ7_m3&_nc_ht=scontent.ftij3-1.fna&oh=03_AVIjw4A3ruSH6iQLTlZFtgK94EA9TjER4g3yADRTIiZwpw&oe=626FAA2B"),
-                width: 350,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: const Image(
+                  image: AssetImage('assets/licenciaturas/Gestion/gestion.jpg'),
+                  width: 350,
+                ),
               ),
               const SizedBox(
-              height: 15,
-            ),
-             Row(children: [
-              Expanded(
-                child: Container(
-                    margin: const EdgeInsets.only(left: 10.0, right: 20.0),
-                    // ignore: prefer_const_constructors
-                    child: Divider(
-                      color: Colors.black,
-                      height: 36,
-                    )),
+                height: 15,
               ),
-              const Text("Acerca de la Ingeniería"),
-              Expanded(
-                child: Container(
-                    margin: const EdgeInsets.only(left: 20.0, right: 10.0),
-                    // ignore: prefer_const_constructors
-                    child: Divider(
-                      color: Colors.black,
-                      height: 36,
-                    )),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+                      // ignore: prefer_const_constructors
+                      child: Divider(
+                        color: Colors.black,
+                        height: 36,
+                      )),
+                ),
+                const Text("Acerca de la Ingeniería"),
+                Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+                      // ignore: prefer_const_constructors
+                      child: Divider(
+                        color: Colors.black,
+                        height: 36,
+                      )),
+                ),
+              ]),
+              const SizedBox(
+                height: 20,
               ),
-            ]),
-            const SizedBox(
-              height: 20,
-            ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
                     child: InkWell(
-                     onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => PerfilIngreso());
+                      onTap: () {
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const PerfilIngreso());
                         Navigator.push(context, route);
-                      }, 
-                      
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Perfil de ingreso",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Perfil de ingreso",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
                     ),
                   ),
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const PerfilEgreso());
                         Navigator.push(context, route);
                       },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Perfil de egreso",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Perfil de egreso",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
                     ),
                   ),
                 ],
@@ -131,63 +129,62 @@ class _IngGestionState extends State<IngGestion> {
                 children: [
                   Card(
                     child: InkWell(
-                     onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => Reticula());
-                        Navigator.push(context, route);
-                      },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Retícula",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
-                        ),
-                       ),
-                    ),
-                    ),
-                  ),
-                  
-                  Card(
-                    child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => TripticoGestion());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const Reticula());
                         Navigator.push(context, route);
                       },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Tríptico",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Retícula",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),
+                  ),
+                  Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const TripticoGestion());
+                        Navigator.push(context, route);
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Tríptico",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -198,8 +195,11 @@ class _IngGestionState extends State<IngGestion> {
                   children: [
                     Row(
                       children: const [
+                        Icon(
+                          Icons.adjust_outlined,
+                        ),
                         Text(
-                          "\u{1F396} Objetivo",
+                          "Objetivo",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -215,8 +215,11 @@ class _IngGestionState extends State<IngGestion> {
                     ),
                     Row(
                       children: const [
+                        Icon(
+                          Icons.engineering_outlined,
+                        ),
                         Text(
-                          "\u{2692} Mision",
+                          "Mision",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -233,8 +236,11 @@ class _IngGestionState extends State<IngGestion> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
+                        Icon(
+                          Icons.remove_red_eye_outlined,
+                        ),
                         Text(
-                          "\u{1F9E2} Vision",
+                          "Vision",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -255,11 +261,11 @@ class _IngGestionState extends State<IngGestion> {
                 child: InkWell(
                   onTap: () async {
                     const url = 'https://youtu.be/_-Fsq3_jjh4 ';
-                      if(await canLaunch(url)){
-                        await launch(url);
-                      }else {
-                        throw 'Could not launch $url';
-                      }
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
                   },
                   child: Container(
                     width: double.infinity,
@@ -333,15 +339,13 @@ class _IngGestionState extends State<IngGestion> {
 class Reticula extends StatelessWidget {
   const Reticula({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Logística Empresarial '),
+        title: const Text('Logística Empresarial '),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/reticula.pdf'),
-          
+      body: SfPdfViewer.asset('assets/licenciaturas/Gestion/reticula.pdf'),
     );
   }
 }
@@ -349,15 +353,13 @@ class Reticula extends StatelessWidget {
 class PerfilEgreso extends StatelessWidget {
   const PerfilEgreso({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de Egreso'),
+        title: const Text('Perfil de Egreso'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/perfilegreso.pdf'),
-          
+      body: SfPdfViewer.asset('assets/licenciaturas/Gestion/perfilegreso.pdf'),
     );
   }
 }
@@ -365,15 +367,14 @@ class PerfilEgreso extends StatelessWidget {
 class TripticoGestion extends StatelessWidget {
   const TripticoGestion({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tríptico'),
+        title: const Text('Tríptico'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/tripticogestion.pdf'),
-          
+      body:
+          SfPdfViewer.asset('assets/licenciaturas/Gestion/tripticogestion.pdf'),
     );
   }
 }
@@ -381,15 +382,13 @@ class TripticoGestion extends StatelessWidget {
 class PerfilIngreso extends StatelessWidget {
   const PerfilIngreso({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de Ingreso'),
+        title: const Text('Perfil de Ingreso'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Gestion/perfilIngreso.pdf'),
+      body: SfPdfViewer.asset('assets/licenciaturas/Gestion/perfilIngreso.pdf'),
     );
   }
 }
-

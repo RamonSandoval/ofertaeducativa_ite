@@ -1,10 +1,7 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:ofertaeducativa_ite/pages/posgrados/general.dart';
 import 'package:ofertaeducativa_ite/pages/posgrados/procesos.dart';
-import 'package:ofertaeducativa_ite/widgets/button.dart';
-import 'package:ofertaeducativa_ite/widgets/carousel.dart';
 
 class Tabss extends StatelessWidget {
   final IconData icono;
@@ -49,8 +46,8 @@ class Tabss extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              General(),
-              Procesos(),
+              const General(),
+              const Procesos(),
               Image.asset(
                 "images/Requisitos de ingreso.png",
                 width: 80,
@@ -62,7 +59,7 @@ class Tabss extends StatelessWidget {
                   "El perfil de egreso de este programa es el siguiente: \nSer capaz de discernir y tomar decisiones en temas relacionados con la industria aeroespacial.\nAdvertir áreas de oportunidad e inferir métodos que permitan aplicar \nconocimientos de ingeniería aeroespacial para la \nsolución o mejora de problemas en cualquier industria.\nDesarrolla y administra proyectos de \ninnovación sobre temas aeroespaciales de \nrelevancia tecnológica.Interactúa, se \nintegra y se comunica en equipos multidisciplinarios de \nacuerdo a las necesidades de un entorno globalizado.\nImpulsa el desarrollo tecnológico \naeroespacial en su entorno.Se comunica \nefectivamente en forma oral y escrita en foros académicos\n y tecnológicos."),
               const Text(
                   "Líneas de Generación y Aplicación del Conocimiento (LGAC)"),
-              Icon(Icons.directions_transit),
+              const Icon(Icons.directions_transit),
             ],
           ),
         ),

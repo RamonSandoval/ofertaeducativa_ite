@@ -15,53 +15,56 @@ class _IngIndustrialState extends State<IngIndustrial> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ingeniería Industrial'),
+        title: const Text('Ingeniería Industrial'),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
-              const Image(
-                image: AssetImage(
-                    'assets/licenciaturas/Industrial/industrial.jpg'),
-                width: 350,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: const Image(
+                  image: AssetImage(
+                      'assets/licenciaturas/Industrial/industrial.jpg'),
+                  width: 350,
+                ),
               ),
               const SizedBox(
-              height: 15,
-            ),
-             Row(children: [
-              Expanded(
-                child: Container(
-                    margin: const EdgeInsets.only(left: 10.0, right: 20.0),
-                    // ignore: prefer_const_constructors
-                    child: Divider(
-                      color: Colors.black,
-                      height: 36,
-                    )),
+                height: 15,
               ),
-              const Text("Acerca de la Ingeniería"),
-              Expanded(
-                child: Container(
-                    margin: const EdgeInsets.only(left: 20.0, right: 10.0),
-                    // ignore: prefer_const_constructors
-                    child: Divider(
-                      color: Colors.black,
-                      height: 36,
-                    )),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+                      // ignore: prefer_const_constructors
+                      child: Divider(
+                        color: Colors.black,
+                        height: 36,
+                      )),
+                ),
+                const Text("Acerca de la Ingeniería"),
+                Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+                      // ignore: prefer_const_constructors
+                      child: Divider(
+                        color: Colors.black,
+                        height: 36,
+                      )),
+                ),
+              ]),
+              const SizedBox(
+                height: 20,
               ),
-            ]),
-            const SizedBox(
-              height: 20,
-            ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => PerfilIngreso());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const PerfilIngreso());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -90,8 +93,8 @@ class _IngIndustrialState extends State<IngIndustrial> {
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const PerfilEgreso());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -125,8 +128,8 @@ class _IngIndustrialState extends State<IngIndustrial> {
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => Reticula());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const Reticula());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -156,7 +159,7 @@ class _IngIndustrialState extends State<IngIndustrial> {
                     child: InkWell(
                       onTap: () {
                         Route route = MaterialPageRoute(
-                            builder: (__) => Triptico());
+                            builder: (__) => const Triptico());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -190,8 +193,11 @@ class _IngIndustrialState extends State<IngIndustrial> {
                   children: [
                     Row(
                       children: const [
+                        Icon(
+                          Icons.adjust_outlined,
+                        ),
                         Text(
-                          "\u{1F396} Objetivo",
+                          "Objetivo",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -207,8 +213,11 @@ class _IngIndustrialState extends State<IngIndustrial> {
                     ),
                     Row(
                       children: const [
+                        Icon(
+                          Icons.engineering_outlined,
+                        ),
                         Text(
-                          "\u{2692} Mision",
+                          "Mision",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -225,8 +234,11 @@ class _IngIndustrialState extends State<IngIndustrial> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
+                        Icon(
+                          Icons.remove_red_eye_outlined,
+                        ),
                         Text(
-                          "\u{1F9E2} Vision",
+                          "Vision",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -243,8 +255,11 @@ class _IngIndustrialState extends State<IngIndustrial> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
+                        Icon(
+                          Icons.watch_later_outlined,
+                        ),
                         Text(
-                          "\u{1F9E2} Modalidad",
+                          "Modalidad",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -347,7 +362,7 @@ class Reticula extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Retítcula '),
+        title: const Text('Retítcula '),
       ),
       body: SfPdfViewer.asset('assets/licenciaturas/Industrial/reticula.pdf'),
     );
@@ -361,7 +376,7 @@ class PerfilEgreso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de Egreso'),
+        title: const Text('Perfil de Egreso'),
       ),
       body:
           SfPdfViewer.asset('assets/licenciaturas/Industrial/perfilEgreso.pdf'),
@@ -376,7 +391,7 @@ class Triptico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tríptico'),
+        title: const Text('Tríptico'),
       ),
       body: SfPdfViewer.asset('assets/licenciaturas/Industrial/triptico.pdf'),
     );
@@ -390,7 +405,7 @@ class PerfilIngreso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de Ingreso'),
+        title: const Text('Perfil de Ingreso'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Industrial/perfilIngreso.pdf'),

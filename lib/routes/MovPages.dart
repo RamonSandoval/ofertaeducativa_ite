@@ -18,7 +18,7 @@ abstract class MovPage {
     Routes.ingEle: (BuildContext context) => const IngElectromecanica(),
     Routes.ingGestion: (BuildContext context) => const IngGestion(),
     Routes.ingElectronica: (BuildContext context) => const IngElectronica(),
-    Routes.Especializaion: (BuildContext context) => Especializacion(),
+    Routes.Especializaion: (BuildContext context) => const Especializacion(),
     Routes.ingIndustrial: (BuildContext context) => const IngIndustrial(),
     Routes.ingMecatronica: (BuildContext context) => const IngMecatronica(),
     Routes.ingSistemas: (BuildContext context) => const IngSistemas(),

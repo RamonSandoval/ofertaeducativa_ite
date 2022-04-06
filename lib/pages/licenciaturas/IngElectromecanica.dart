@@ -17,46 +17,44 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ingenieria Electromecánica',
+        title: Text(
+          'Ingenieria Electromecánica',
           style: GoogleFonts.montserrat(),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
-          
           child: Column(children: [
-             ClipRRect(
-               borderRadius: BorderRadius.circular(8.0),
-            // ignore: prefer_const_constructors
-            child: Image(
-              image: const AssetImage(
-                  'assets/licenciaturas/Electromecanica/electromecanica.jpeg'),
-              width: 350,
-            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              // ignore: prefer_const_constructors
+              child: Image(
+                image: const AssetImage(
+                    'assets/licenciaturas/Electromecanica/electromecanica.jpeg'),
+                width: 350,
+              ),
             ),
             const SizedBox(
               height: 15,
             ),
-             Row(children: [
+            Row(children: [
               Expanded(
                 child: Container(
                     margin: const EdgeInsets.only(left: 10.0, right: 20.0),
-                    // ignore: prefer_const_constructors
                     child: Divider(
                       color: Colors.black,
                       height: 36,
                     )),
               ),
-               Text(
+              Text(
                 "Acerca de la Ingeniería",
                 textAlign: TextAlign.justify,
-                    style: GoogleFonts.montserrat(),
-                ),
+                style: GoogleFonts.montserrat(),
+              ),
               Expanded(
                 child: Container(
                     margin: const EdgeInsets.only(left: 20.0, right: 10.0),
-                    // ignore: prefer_const_constructors
                     child: Divider(
                       color: Colors.black,
                       height: 36,
@@ -66,7 +64,6 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
             const SizedBox(
               height: 20,
             ),
-            
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -86,12 +83,12 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                               fit: BoxFit.cover,
                               image: NetworkImage(
                                   'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
-                      child:  Padding(
+                      child: Padding(
                         padding: EdgeInsets.all(10.0),
                         child: Text(
                           "Perfil de Ingreso",
-                          
-                          style: GoogleFonts.montserrat(fontSize: 18,
+                          style: GoogleFonts.montserrat(
+                              fontSize: 18,
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
                           textAlign: TextAlign.center,
@@ -107,26 +104,27 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                           MaterialPageRoute(builder: (__) => PerfilEgreso());
                       Navigator.push(context, route);
                     },
-                  child: Container(
-                    width: 160,
-                    height: 130,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                                'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
-                    child:  Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        "Perfil de Egreso",
-                        style: GoogleFonts.montserrat(fontSize: 18,
+                    child: Container(
+                      width: 160,
+                      height: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
+                      child: Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          "Perfil de Egreso",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 18,
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
-                        textAlign: TextAlign.center,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
-                  ),
                   ),
                 ),
               ],
@@ -141,26 +139,27 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                           MaterialPageRoute(builder: (__) => Reticula());
                       Navigator.push(context, route);
                     },
-                  child: Container(
-                    width: 160,
-                    height: 130,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                                'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
-                    child:  Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        "Retícula",
-                        style: GoogleFonts.montserrat(fontSize: 18,
+                    child: Container(
+                      width: 160,
+                      height: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
+                      child: Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          "Retícula",
+                          style: GoogleFonts.montserrat(
+                              fontSize: 18,
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
-                        textAlign: TextAlign.center,
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
-                  ),
                   ),
                 ),
                 Card(
@@ -179,11 +178,12 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                               fit: BoxFit.cover,
                               image: NetworkImage(
                                   'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
-                      child:  Padding(
+                      child: Padding(
                         padding: EdgeInsets.only(top: 90),
                         child: Text(
                           "Tríptico",
-                          style: GoogleFonts.montserrat(fontSize: 18,
+                          style: GoogleFonts.montserrat(
+                              fontSize: 18,
                               fontWeight: FontWeight.w600,
                               color: Colors.white),
                           textAlign: TextAlign.center,
@@ -203,7 +203,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       Icon(
                         Icons.adjust_outlined,
                       ),
-                      Text(  
+                      Text(
                         "Objetivo",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
@@ -212,12 +212,11 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                   ),
                   Text(
                     "Formar profesionistas de excelencia en Ingeniería Electromecánica, con actitud emprendedora, liderazgo y capacidad de: analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica, considerando las normas y estándares nacionales e internacionales de forma sustentable con plena conciencia ética, humanística y social.",
-                    
                     textAlign: TextAlign.justify,
                     style: GoogleFonts.montserrat(
                       fontSize: 16,
-                      ),
-                   ),
+                    ),
+                  ),
                   const SizedBox(
                     height: 30,
                   ),
@@ -233,12 +232,12 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       ),
                     ],
                   ),
-                   Text(
+                  Text(
                     "Ser una institución de educación superior formadora de profesionistas en ingeniería electromecánica, capaces de promover el desarrollo sostenido, sustentable y equitativo en la región.",
                     textAlign: TextAlign.justify,
                     style: GoogleFonts.montserrat(
                       fontSize: 16,
-                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 30,
@@ -256,12 +255,12 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       ),
                     ],
                   ),
-                   Text(
+                  Text(
                     "Formar profesionista de excelencia en ingeniería electromecánica, con actitud emprendedora, con liderazgo, y capacidad para analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica. Considerando las normas estándares nacionales e internacionales para fomentar el desarrollo sustentable con plena conciencia ética, humanística y social.",
                     textAlign: TextAlign.justify,
                     style: GoogleFonts.montserrat(
                       fontSize: 16,
-                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 30,
@@ -273,7 +272,6 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                         Icons.watch_later_outlined,
                       ),
                       Text(
-
                         "Modalidad",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
@@ -285,7 +283,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                     textAlign: TextAlign.justify,
                     style: GoogleFonts.montserrat(
                       fontSize: 16,
-                      ),
+                    ),
                   ),
                 ],
               ),
@@ -304,16 +302,17 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          title:  Text("Informacion de Contacto",
+                          title: Text(
+                            "Informacion de Contacto",
                             style: GoogleFonts.montserrat(),
                           ),
                           content: SingleChildScrollView(
                             child: ListBody(
-                              children:  [
-                              Text(
-                                    "Jefe del Departamento de Ingeniería Eléctrica y Electrónica\nFrancisco Ramos Flores\nCorreo: diee@ite.edu.mx\nTeléfono: 646 177 5680 ext. 2010\n\nCoordinadora de carrera\nVayra Valeria Medina Felix \nCorreo: coord_electromecanica@ite.edu.mx",    
-                                style: GoogleFonts.montserrat(),
-                              )
+                              children: [
+                                Text(
+                                  "Jefe del Departamento de Ingeniería Eléctrica y Electrónica\nFrancisco Ramos Flores\nCorreo: diee@ite.edu.mx\nTeléfono: 646 177 5680 ext. 2010\n\nCoordinadora de carrera\nVayra Valeria Medina Felix \nCorreo: coord_electromecanica@ite.edu.mx",
+                                  style: GoogleFonts.montserrat(),
+                                )
                               ],
                             ),
                           ),
@@ -359,6 +358,7 @@ class Triptico extends StatelessWidget {
     );
   }
 }
+
 class PerfilIngreso extends StatelessWidget {
   const PerfilIngreso({Key? key}) : super(key: key);
 
@@ -373,6 +373,7 @@ class PerfilIngreso extends StatelessWidget {
     );
   }
 }
+
 class PerfilEgreso extends StatelessWidget {
   const PerfilEgreso({Key? key}) : super(key: key);
 
@@ -387,6 +388,7 @@ class PerfilEgreso extends StatelessWidget {
     );
   }
 }
+
 class Reticula extends StatelessWidget {
   const Reticula({Key? key}) : super(key: key);
 

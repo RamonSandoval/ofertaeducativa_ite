@@ -26,15 +26,18 @@ class _IngElectronicaState extends State<IngElectronica> {
             const SizedBox(
               height: 20,
             ),
-            const Image(
-              image: AssetImage(
-                  'assets/licenciaturas/Electronica/electronica.jpg'),
-              width: 350,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child: const Image(
+                image: AssetImage(
+                    'assets/licenciaturas/Electronica/electronica.jpg'),
+                width: 350,
+              ),
             ),
             const SizedBox(
               height: 15,
             ),
-             Row(children: [
+            Row(children: [
               Expanded(
                 child: Container(
                     margin: const EdgeInsets.only(left: 10.0, right: 20.0),
@@ -64,8 +67,8 @@ class _IngElectronicaState extends State<IngElectronica> {
                 Card(
                   child: InkWell(
                     onTap: () {
-                      Route route =
-                          MaterialPageRoute(builder: (__) => const PerfilIngreso());
+                      Route route = MaterialPageRoute(
+                          builder: (__) => const PerfilIngreso());
                       Navigator.push(context, route);
                     },
                     child: Container(
@@ -94,31 +97,31 @@ class _IngElectronicaState extends State<IngElectronica> {
                 Card(
                   child: InkWell(
                     onTap: () {
-                      Route route =
-                          MaterialPageRoute(builder: (__) => const PerfilEgreso());
+                      Route route = MaterialPageRoute(
+                          builder: (__) => const PerfilEgreso());
                       Navigator.push(context, route);
                     },
-                  child: Container(
-                    width: 160,
-                    height: 130,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                                'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        "Perfil de Egreso",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white),
-                        textAlign: TextAlign.center,
+                    child: Container(
+                      width: 160,
+                      height: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          "Perfil de Egreso",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
-                  ),
                   ),
                 ),
               ],
@@ -133,27 +136,27 @@ class _IngElectronicaState extends State<IngElectronica> {
                           MaterialPageRoute(builder: (__) => const Reticula());
                       Navigator.push(context, route);
                     },
-                  child: Container(
-                    width: 160,
-                    height: 130,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                                'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        "Retícula",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white),
-                        textAlign: TextAlign.center,
+                    child: Container(
+                      width: 160,
+                      height: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          "Retícula",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
-                  ),
                   ),
                 ),
                 Card(
@@ -194,8 +197,11 @@ class _IngElectronicaState extends State<IngElectronica> {
                 children: [
                   Row(
                     children: const [
+                      Icon(
+                        Icons.adjust_outlined,
+                      ),
                       Text(
-                        "\u{1F396} Objetivo",
+                        "Objetivo",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
@@ -211,8 +217,11 @@ class _IngElectronicaState extends State<IngElectronica> {
                   ),
                   Row(
                     children: const [
+                      Icon(
+                        Icons.engineering_outlined,
+                      ),
                       Text(
-                        "\u{2692} Mision",
+                        "Mision",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
@@ -229,8 +238,11 @@ class _IngElectronicaState extends State<IngElectronica> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
+                      Icon(
+                        Icons.remove_red_eye_outlined,
+                      ),
                       Text(
-                        "\u{1F9E2} Vision",
+                        "Vision",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
@@ -247,8 +259,11 @@ class _IngElectronicaState extends State<IngElectronica> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
+                      Icon(
+                        Icons.watch_later_outlined,
+                      ),
                       Text(
-                        "\u{1F9E2} Modalidad",
+                        "Modalidad",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w600),
                       ),
@@ -360,8 +375,7 @@ class Triptico extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Triptico'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Electronica/triptico.pdf'),
+      body: SfPdfViewer.asset('assets/licenciaturas/Electronica/triptico.pdf'),
     );
   }
 }
@@ -405,8 +419,7 @@ class Reticula extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Retícula'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Electronica/reticula.pdf'),
+      body: SfPdfViewer.asset('assets/licenciaturas/Electronica/reticula.pdf'),
     );
   }
 }

@@ -55,7 +55,8 @@ class Drawers extends StatelessWidget {
                         submenuContent: const Text("Ing. Electrónica",
                             style: TextStyle(color: Colors.white)),
                         onClick: () {
-                          Navigator.popAndPushNamed(context, Routes.ingElectronica);
+                          Navigator.popAndPushNamed(
+                              context, Routes.ingElectronica);
                         }),
                     MLSubmenu(
                         submenuContent: const Text("Ing. Gestión Empresarial",
@@ -69,6 +70,27 @@ class Drawers extends StatelessWidget {
                         onClick: () {
                           Navigator.popAndPushNamed(
                               context, Routes.ingIndustrial);
+                        }),
+                    MLSubmenu(
+                        submenuContent: const Text("Ing. Mecatronica",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {
+                          Navigator.popAndPushNamed(
+                              context, Routes.ingMecatronica);
+                        }),
+                    MLSubmenu(
+                        submenuContent: const Text(
+                            "Ing. Sistemas Computacionales",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {
+                          Navigator.popAndPushNamed(
+                              context, Routes.ingSistemas);
+                        }),
+                    MLSubmenu(
+                        submenuContent: const Text("Lic. Administracion",
+                            style: TextStyle(color: Colors.white)),
+                        onClick: () {
+                          Navigator.popAndPushNamed(context, Routes.licAdmin);
                         }),
                   ],
                   content: const Text(" Licenciaturas",

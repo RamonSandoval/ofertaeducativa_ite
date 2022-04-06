@@ -1,9 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
-import 'dart:io';
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -19,53 +16,56 @@ class _IngMecatronicaState extends State<IngMecatronica> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Ingeniería Mecatronica'),
+        title: const Text('Ingeniería Mecatronica'),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
-              const Image(
-                image: AssetImage(
-                    'assets/licenciaturas/Mecatronica/mecatronic.jpeg'),
-                width: 370,
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: const Image(
+                  image: AssetImage(
+                      'assets/licenciaturas/Mecatronica/mecatronica.jpeg'),
+                  width: 370,
+                ),
               ),
               const SizedBox(
-              height: 15,
-            ),
-             Row(children: [
-              Expanded(
-                child: Container(
-                    margin: const EdgeInsets.only(left: 10.0, right: 20.0),
-                    // ignore: prefer_const_constructors
-                    child: Divider(
-                      color: Colors.black,
-                      height: 36,
-                    )),
+                height: 15,
               ),
-              const Text("Acerca de la Ingeniería"),
-              Expanded(
-                child: Container(
-                    margin: const EdgeInsets.only(left: 20.0, right: 10.0),
-                    // ignore: prefer_const_constructors
-                    child: Divider(
-                      color: Colors.black,
-                      height: 36,
-                    )),
+              Row(children: [
+                Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+                      // ignore: prefer_const_constructors
+                      child: Divider(
+                        color: Colors.black,
+                        height: 36,
+                      )),
+                ),
+                const Text("Acerca de la Ingeniería"),
+                Expanded(
+                  child: Container(
+                      margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+                      // ignore: prefer_const_constructors
+                      child: Divider(
+                        color: Colors.black,
+                        height: 36,
+                      )),
+                ),
+              ]),
+              const SizedBox(
+                height: 20,
               ),
-            ]),
-            const SizedBox(
-              height: 20,
-            ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => PerfilIngreso());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const PerfilIngreso());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -94,31 +94,31 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const PerfilEgreso());
                         Navigator.push(context, route);
                       },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Perfil de egreso",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Perfil de egreso",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
                     ),
                   ),
                 ],
@@ -129,38 +129,38 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => Reticula());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const Reticula());
                         Navigator.push(context, route);
                       },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Retícula",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Retícula",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
                     ),
                   ),
                   Card(
                     child: InkWell(
                       onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => Triptico());
+                        Route route = MaterialPageRoute(
+                            builder: (__) => const Triptico());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -194,8 +194,11 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                   children: [
                     Row(
                       children: const [
+                        Icon(
+                          Icons.adjust_outlined,
+                        ),
                         Text(
-                          "\u{1F396} Objetivo",
+                          "Objetivo",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -211,8 +214,11 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                     ),
                     Row(
                       children: const [
+                        Icon(
+                          Icons.engineering_outlined,
+                        ),
                         Text(
-                          "\u{2692} Misión",
+                          "Mision",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -229,8 +235,11 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
+                        Icon(
+                          Icons.remove_red_eye_outlined,
+                        ),
                         Text(
-                          "\u{1F9E2} Visión",
+                          "Vision",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -247,8 +256,11 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: const [
+                        Icon(
+                          Icons.watch_later_outlined,
+                        ),
                         Text(
-                          "\u{1F9E2} Modalidad",
+                          "Modalidad",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600),
                         ),
@@ -303,7 +315,7 @@ class _IngMecatronicaState extends State<IngMecatronica> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               SizedBox(
@@ -359,13 +371,13 @@ class Triptico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tríptico'),
+        title: const Text('Tríptico'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Mecatronica/triptico.pdf'),
+      body: SfPdfViewer.asset('assets/licenciaturas/Mecatronica/triptico.pdf'),
     );
   }
 }
+
 class PerfilIngreso extends StatelessWidget {
   const PerfilIngreso({Key? key}) : super(key: key);
 
@@ -373,13 +385,14 @@ class PerfilIngreso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de Ingreso'),
+        title: const Text('Perfil de Ingreso'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Mecatronica/perfilingreso.pdf'),
     );
   }
 }
+
 class PerfilEgreso extends StatelessWidget {
   const PerfilEgreso({Key? key}) : super(key: key);
 
@@ -387,13 +400,14 @@ class PerfilEgreso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de Egreso'),
+        title: const Text('Perfil de Egreso'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Mecatronica/perfilegreso.pdf'),
     );
   }
 }
+
 class Reticula extends StatelessWidget {
   const Reticula({Key? key}) : super(key: key);
 
@@ -401,10 +415,9 @@ class Reticula extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Retícula'),
+        title: const Text('Retícula'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Mecatronica/reticula.pdf'),
+      body: SfPdfViewer.asset('assets/licenciaturas/Mecatronica/reticula.pdf'),
     );
   }
 }
