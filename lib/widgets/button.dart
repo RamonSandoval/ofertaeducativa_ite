@@ -22,13 +22,14 @@ class Button extends StatelessWidget {
                       Text(
                         texto,
                         textAlign: TextAlign.center,
-                      )
+                      ),
                     ],
                   ),
                 ),
                 actions: [
                   FlatButton(
-                    child: const Text("Aceptar"),
+                    child: const Text("Aceptar",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
@@ -37,9 +38,9 @@ class Button extends StatelessWidget {
               );
             });
       },
-      color: Colors.white,
+      color: const Color.fromARGB(217, 27, 57, 106),
       child: const Text('Información general',
-          style: TextStyle(color: Colors.black)),
+          style: TextStyle(color: Colors.white)),
     );
   }
 }

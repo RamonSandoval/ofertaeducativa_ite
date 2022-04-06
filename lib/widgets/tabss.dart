@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:ofertaeducativa_ite/pages/posgrados/general.dart';
+import 'package:ofertaeducativa_ite/pages/posgrados/procesos.dart';
 import 'package:ofertaeducativa_ite/widgets/button.dart';
 import 'package:ofertaeducativa_ite/widgets/carousel.dart';
 
@@ -46,11 +47,15 @@ class Tabss extends StatelessWidget {
             ),
             title: Text(labels),
           ),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
               General(),
-              const Text("Proceso de admisión"),
-              const Text("COHORTE 2020-2 NÚMERO DE CONTROL	POR DEFINIR"),
+              Procesos(),
+              Image.asset(
+                "images/Requisitos de ingreso.png",
+                width: 80,
+                height: 80,
+              ),
               const Text(
                   "Objetivo General Proporcionar al estudiante los \nelementos teórico-metodológicos, analíticos y operativos que \npermitan formar especialistas de alto perfil para la \nindustria aeroespacial, capaces de gestar ideas y acciones significativas en su entorno, realizando trabajos de gran relevancia para el sector aeroespacial mediante vínculos directos con las empresas del país."),
               const Text(

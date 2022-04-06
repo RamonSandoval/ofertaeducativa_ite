@@ -25,7 +25,7 @@ class Fotos extends StatelessWidget {
             .map(
               (item) => Image.network(
                 item,
-                width: 250,
+                width: 600,
               ),
             )
             .toList(),

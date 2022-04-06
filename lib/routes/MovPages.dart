@@ -9,6 +9,7 @@ import 'package:ofertaeducativa_ite/pages/licenciaturas/ingGestion.dart';
 import 'package:ofertaeducativa_ite/pages/posgrados/especializacion.dart';
 import 'package:ofertaeducativa_ite/pages/licenciaturas/licAdmin.dart';
 import 'package:ofertaeducativa_ite/routes/routes.dart';
+import 'package:ofertaeducativa_ite/widgets/Pdf.dart';
 
 abstract class MovPage {
   static Map<String, Widget Function(BuildContext)> route = {
@@ -22,5 +23,6 @@ abstract class MovPage {
     Routes.ingMecatronica: (BuildContext context) => const IngMecatronica(),
     Routes.ingSistemas: (BuildContext context) => const IngSistemas(),
     Routes.licAdmin: (BuildContext context) => const LicAdmin(),
+    Routes.pdf: (BuildContext context) => const PDF(),
   };
 }

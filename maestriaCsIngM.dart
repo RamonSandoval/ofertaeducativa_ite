@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ofertaeducativa_ite/widgets/button.dart';
 
 import 'package:ofertaeducativa_ite/widgets/carousel.dart';
 
@@ -14,7 +13,6 @@ class Especializacion extends StatelessWidget {
         child: Column(
           children: [
             Fotos(),
-            const Button(),
           ],
         ),
       ),
