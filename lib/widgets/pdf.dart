@@ -10,10 +10,8 @@ class PDF extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: SfPdfViewer.asset(direccion),
-      ),
+    return SingleChildScrollView(
+      child: SfPdfViewer.asset(direccion),
     );
   }
 }

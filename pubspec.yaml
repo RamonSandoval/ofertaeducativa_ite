@@ -69,7 +69,14 @@ flutter:
     - assets/licenciaturas/Sistemas/sistemas.jpeg
     - assets/licenciaturas/Administracion/administracion.jpeg
     - images/logo.png
+    - assets/posgrados/espe/Imagen.jpeg
   #pdfs
+    - assets/posgrados/espe/procesos.pdf
+    - assets/posgrados/espe/LGAC.pdf
+    - assets/posgrados/espe/PerfilEgreso.pdf
+    - assets/posgrados/espe/Requisitos.pdf
+    - assets/posgrados/espe/Matriculados.pdf
+    - assets/posgrados/espe/Objetivos.pdf
     - assets/licenciaturas/Electromecanica/tripticoelectro.pdf
     - assets/licenciaturas/Electromecanica/tripticoelectro.pdf
     - assets/licenciaturas/Gestion/perfilIngreso.pdf
