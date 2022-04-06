@@ -46,34 +46,6 @@ class Drawers extends StatelessWidget {
                   trailing: const Icon(Icons.arrow_right, color: Colors.white),
                   subMenuItems: [
                     MLSubmenu(
-                        submenuContent: const Text(
-                          "Historia",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text("Directorio",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                  ],
-                  content: const Text(" Nosotros",
-                      style: TextStyle(color: Colors.white)),
-                  onClick: () {}),
-              MLMenuItem(
-                  leading: const Icon(
-                    Icons.book,
-                    color: Colors.white,
-                  ),
-                  trailing: const Icon(
-                    Icons.arrow_right,
-                    color: Colors.white,
-                  ),
-                  subMenuItems: [
-                    MLSubmenu(
-                        submenuContent: const Text("Licenciaturas",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                    MLSubmenu(
                         submenuContent: const Text("Ing. Electromecánica",
                             style: TextStyle(color: Colors.white)),
                         onClick: () {
@@ -98,12 +70,20 @@ class Drawers extends StatelessWidget {
                           Navigator.popAndPushNamed(
                               context, Routes.ingIndustrial);
                         }),
-                    MLSubmenu(
-                        submenuContent: const Text("Posgrados",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {
-                          Navigator.popAndPushNamed(context, Routes.licAdmin);
-                        }),
+                  ],
+                  content: const Text(" Licenciaturas",
+                      style: TextStyle(color: Colors.white)),
+                  onClick: () {}),
+              MLMenuItem(
+                  leading: const Icon(
+                    Icons.book,
+                    color: Colors.white,
+                  ),
+                  trailing: const Icon(
+                    Icons.arrow_right,
+                    color: Colors.white,
+                  ),
+                  subMenuItems: [
                     MLSubmenu(
                         submenuContent: const Text(
                             "Especialización en Industrial Aeroespacials",
@@ -123,43 +103,7 @@ class Drawers extends StatelessWidget {
                             style: TextStyle(color: Colors.white)),
                         onClick: () {}),
                   ],
-                  content: const Text("  Oferta Educativa",
-                      style: TextStyle(color: Colors.white)),
-                  onClick: () {}),
-              MLMenuItem(
-                  leading: const Icon(Icons.school, color: Colors.white),
-                  trailing: const Icon(Icons.arrow_right, color: Colors.white),
-                  subMenuItems: [
-                    MLSubmenu(
-                        submenuContent: const Text(
-                          "Servicios estudiantiles",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text("Servicios financieros",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                  ],
-                  content: const Text(" Estudiantes",
-                      style: TextStyle(color: Colors.white)),
-                  onClick: () {}),
-              MLMenuItem(
-                  leading: const Icon(Icons.new_label, color: Colors.white),
-                  trailing: const Icon(Icons.arrow_right, color: Colors.white),
-                  subMenuItems: [
-                    MLSubmenu(
-                        submenuContent: const Text(
-                          "Cónocenos",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        onClick: () {}),
-                    MLSubmenu(
-                        submenuContent: const Text("Convocatoria nuevo ingreso",
-                            style: TextStyle(color: Colors.white)),
-                        onClick: () {}),
-                  ],
-                  content: const Text(" Aspirantes",
+                  content: const Text(" Posgrados",
                       style: TextStyle(color: Colors.white)),
                   onClick: () {}),
             ]),
