@@ -14,7 +14,6 @@ class Especializacion extends StatelessWidget {
         child: Column(
           children: [
             Fotos(),
-            const Button(),
           ],
         ),
       ),

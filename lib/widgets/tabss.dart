@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:ofertaeducativa_ite/pages/posgrados/general.dart';
 import 'package:ofertaeducativa_ite/widgets/button.dart';
 import 'package:ofertaeducativa_ite/widgets/carousel.dart';
 
@@ -45,27 +46,9 @@ class Tabss extends StatelessWidget {
             ),
             title: Text(labels),
           ),
-          body: TabBarView(
+          body: const TabBarView(
             children: [
-              Column(
-                children: [
-                  const Text(
-                    "Especialización en industria Aeroespacial",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                  const SizedBox(height: 15),
-                  Row(
-                    children: [Fotos()],
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [Button()],
-                  ),
-                ],
-              ),
+              General(),
               const Text("Proceso de admisión"),
               const Text("COHORTE 2020-2 NÚMERO DE CONTROL	POR DEFINIR"),
               const Text(

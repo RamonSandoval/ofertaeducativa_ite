@@ -42,7 +42,7 @@ class Drawers extends StatelessWidget {
             ),
             children: [
               MLMenuItem(
-                  leading: const Icon(Icons.home, color: Colors.white),
+                  leading: const Icon(Icons.school, color: Colors.white),
                   trailing: const Icon(Icons.arrow_right, color: Colors.white),
                   subMenuItems: [
                     MLSubmenu(

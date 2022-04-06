@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  const Button({Key? key}) : super(key: key);
+  final String texto;
+  const Button({
+    Key? key,
+    required this.texto,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +18,11 @@ class Button extends StatelessWidget {
                 title: const Text("Información general"),
                 content: SingleChildScrollView(
                   child: ListBody(
-                    children: const [
+                    children: [
                       Text(
-                          "Coordinador Acádemico\n Josefina Campos García\n coord_eia@ite.edu.mx\n 6461775680 ext. 1063")
+                        texto,
+                        textAlign: TextAlign.center,
+                      )
                     ],
                   ),
                 ),
