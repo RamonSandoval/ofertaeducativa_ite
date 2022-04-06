@@ -63,6 +63,11 @@ flutter:
   #imagenes
     - assets/licenciaturas/Electromecanica/electromecanica.jpeg
     - assets/licenciaturas/Industrial/industrial.jpg
+    - assets/licenciaturas/Electronica/electronica.jpg
+    - assets/licenciaturas/Gestion/gestion.jpg
+    - assets/licenciaturas/Mecatronica/mecatronic.jpeg
+    - assets/licenciaturas/Sistemas/sistemas.jpeg
+    - assets/licenciaturas/Administracion/administracion.jpeg
     - images/logo.png
   #pdfs
     - assets/licenciaturas/Electromecanica/tripticoelectro.pdf

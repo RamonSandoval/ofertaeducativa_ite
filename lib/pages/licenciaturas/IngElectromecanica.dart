@@ -22,13 +22,10 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
         title: Text('Ingenieria Electromecánica'),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 0, left: 10, right: 10),
+        padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
-              const SizedBox(
-                height: 20,
-              ),
               const Image(
                 image: AssetImage(
                     'assets/licenciaturas/Electromecanica/electromecanica.jpeg'),
@@ -138,7 +135,7 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
                                 image: NetworkImage(
                                     'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
                         child: const Padding(
-                          padding: EdgeInsets.all(10.0),
+                          padding: EdgeInsets.only(top: 90),
                           child: Text(
                             "Tríptico",
                             style: TextStyle(
@@ -230,38 +227,8 @@ class _IngElectromecanicaState extends State<IngElectromecanica> {
               const SizedBox(
                 height: 30,
               ),
-              Card(
-                child: InkWell(
-                  onTap: () async {
-                    const url = 'https://youtu.be/_-Fsq3_jjh4 ';
-                    if (await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
-                  },
-                  child: Container(
-                    width: double.infinity,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(0),
-                        image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(
-                                'https://img.youtube.com/vi/_-Fsq3_jjh4/0.jpg'))),
-                    child: const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        "El TecNM campus Ensenada, oferta Ingeniería Electrónica.",
-                        style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white),
-                        textAlign: TextAlign.left,
-                      ),
-                    ),
-                  ),
-                ),
+              const SizedBox(
+                height: 10,
               ),
               SizedBox(
                 width: double.infinity,

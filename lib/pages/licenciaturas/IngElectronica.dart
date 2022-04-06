@@ -1,11 +1,11 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:io';
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
-
-void main() async {
-  runApp(const IngElectronica());
-}
+import 'package:url_launcher/url_launcher.dart';
 
 class IngElectronica extends StatefulWidget {
   const IngElectronica({Key? key}) : super(key: key);
@@ -18,142 +18,299 @@ class _IngElectronicaState extends State<IngElectronica> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Ingenieria Electrónica'),
+      ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 10, right: 10),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: SingleChildScrollView(
-          child: Column(children: [
-            const Text(
-              "Ingeniería Electronica",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.black,
+          child: Container(
+            child: Column(children: [
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Image(
-              image: NetworkImage(
-                  "https://www.ensenada.333tecnm.mx/wp-content/uploads/2020/09/electronica.jpeg"),
-              width: 350,
-            ),
-            Row(
-              children: [
-                Card(
-                  child: InkWell(
-                    splashColor: const Color.fromARGB(217, 27, 57, 106),
-                    onTap: () {
-                      Route route =
-                          MaterialPageRoute(builder: (__) => const Triptico());
-                      Navigator.push(context, route);
-                    },
-                    child: const SizedBox(
-                      width: 140,
-                      height: 100,
-                      child: Text("Tarjeta 1"),
-                    ),
-                  ),
-                ),
-                Card(
-                  child: InkWell(
-                    splashColor: const Color.fromARGB(217, 27, 57, 106),
-                    onTap: () {
-                      Route route =
-                          MaterialPageRoute(builder: (__) => const Triptico());
-                      Navigator.push(context, route);
-                    },
-                    child: const SizedBox(
-                      width: 140,
-                      height: 100,
-                      child: Text("Tarjeta 1"),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Card(
-                  child: InkWell(
-                    splashColor: const Color.fromARGB(217, 27, 57, 106),
-                    onTap: () {
-                      Route route =
-                          MaterialPageRoute(builder: (__) => const Triptico());
-                      Navigator.push(context, route);
-                    },
-                    child: const SizedBox(
-                      width: 140,
-                      height: 100,
-                      child: Text("Tarjeta 1"),
-                    ),
-                  ),
-                ),
-                Card(
-                  child: InkWell(
-                    splashColor: const Color.fromARGB(217, 27, 57, 106),
-                    onTap: () {
-                      Route route =
-                          MaterialPageRoute(builder: (__) => const Triptico());
-                      Navigator.push(context, route);
-                    },
-                    child: const SizedBox(
-                      width: 140,
-                      height: 100,
-                      child: Text("Tarjeta 1"),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const Text("Objetivo"),
-            const Text(
-                "Formar profesionistas de excelencia en Ingeniería Electromecánica, con actitud emprendedora, liderazgo y capacidad de: analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica, considerando las normas y estándares nacionales e internacionales de forma sustentable con plena conciencia ética, humanística y social."),
-            const Text("Mision"),
-            const Text(
-                "Ser una institución de educación superior formadora de profesionistas en ingeniería electromecánica, capaces de promover el desarrollo sostenido, sustentable y equitativo en la región."),
-            const Text("Vision"),
-            const Text(
-                "Formar profesionista de excelencia en ingeniería electromecánica, con actitud emprendedora, con liderazgo, y capacidad para analizar, diagnosticar, diseñar, seleccionar, instalar, administrar, mantener e innovar sistemas electromecánicos, en forma eficiente, segura y económica. Considerando las normas estándares nacionales e internacionales para fomentar el desarrollo sustentable con plena conciencia ética, humanística y social."),
-            SizedBox(
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () {
-                  showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: const Text("Informacion de Contacto"),
-                          content: SingleChildScrollView(
-                            child: ListBody(
-                              children: const [
-                                Text(
-                                    "Francisco Ramos Flores Jefe del Departamento de Ingeniería Eléctrica y Electrónica Correo: diee@ite.edu.mx Teléfono: 646 177 5680 ext. 2010 Vayra Valeria Medina Felix Coordinadora de carrera Correo: coord_electromecanica@ite.edu.mx")
-                              ],
-                            ),
+              const Image(
+                image: AssetImage(
+                    'assets/licenciaturas/Electronica/electronica.jpg'),
+                width: 350,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Perfil de ingreso",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
                           ),
-                          actions: [
-                            FlatButton(
-                              child: const Text("Aceptar"),
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                            ),
-                          ],
-                        );
-                      });
-                },
-                child: const Text(
-                  'Contactar',
-                  style: TextStyle(color: Colors.white),
-                ),
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                      const Color.fromARGB(217, 27, 57, 106)),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    child: Container(
+                      width: 160,
+                      height: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          "Perfil de egreso",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Card(
+                    child: Container(
+                      width: 160,
+                      height: 130,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                  'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          "Retícula",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Triptico());
+                        Navigator.push(context, route);
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.only(top: 90),
+                          child: Text(
+                            "Tríptico",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
+                child: Column(
+                  children: [
+                    Row(
+                      children: const [
+                        Text(
+                          "\u{1F396} Objetivo",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Formar profesionistas competentes para diseñar, modelar, implementar, operar, integrar, mantener, instalar y administrar sistemas electrónicos; así como innovar y transferir tecnología electrónica existente y emergente en proyectos interdisciplinarios y multidisciplinarios, a nivel nacional e internacional, con capacidad de resolver problemas y atender las necesidades de su entorno con ética, actitud analítica, emprendedora y creativa, comprometidos con el desarrollo sustentable.",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      children: const [
+                        Text(
+                          "\u{2692} Mision",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Formar profesionistas con calidad integral en el campo de la innovación y desarrollo de la tecnología electrónica, a fin de ofrecer soluciones a problemas del entorno, dentro de un marco de competitividad.",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "\u{1F9E2} Vision",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Formar profesionistas con calidad integral en el campo de la innovación y desarrollo de la tecnología electrónica, a fin de ofrecer soluciones a problemas del entorno, dentro de un marco de competitividad.",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "\u{1F9E2} Modalidad",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Escolarizada horario de lunes a viernes",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
+                  ],
                 ),
               ),
-            ),
-          ]),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text('Video promocional',
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Color.fromARGB(217, 27, 57, 106))),
+              Card(
+                child: InkWell(
+                  onTap: () async {
+                    const url = 'https://youtu.be/_-Fsq3_jjh4 ';
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 200,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(0),
+                        image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: NetworkImage(
+                                'https://img.youtube.com/vi/_-Fsq3_jjh4/0.jpg'))),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text(
+                        "El TecNM campus Ensenada, oferta Ingeniería Electrónica.",
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white),
+                        textAlign: TextAlign.left,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: const Text("Información de Contacto"),
+                            content: SingleChildScrollView(
+                              child: ListBody(
+                                children: const [
+                                  Text(
+                                      "Jefe del Departamento de Ingeniería Eléctrica y Electrónica\nCorreo: diee@ite.edu.mx\nTeléfono: 646 177 5680 ext. 2010\n\nCoordinador de carrera\nJorge Antonio Moreno Rochín\nCorreo: coord_electronica@ite.edu.mx")
+                                ],
+                              ),
+                            ),
+                            actions: [
+                              FlatButton(
+                                child: const Text("Aceptar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        });
+                  },
+                  child: const Text(
+                    'Informacion de Contacto',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(217, 27, 57, 106)),
+                  ),
+                ),
+              ),
+            ]),
+          ),
         ),
       ),
     );
@@ -167,10 +324,10 @@ class Triptico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Reticula'),
+        title: Text('Triptico'),
       ),
-      body: SfPdfViewer.network(
-          'https://tijuana.tecnm.mx/wp-content/uploads/2017/12/Reticula_Ingenieria_Electromecanica.pdf'),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electromecanica/tripticoelectro.pdf'),
     );
   }
 }

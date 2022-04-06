@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
-
 class IngIndustrial extends StatefulWidget {
   const IngIndustrial({Key? key}) : super(key: key);
 
@@ -17,27 +15,16 @@ class _IngIndustrialState extends State<IngIndustrial> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TECNM'),
+        title: Text('Ingeniería Industrial'),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Container(
             child: Column(children: [
-              const Text(
-                "Ingeniería Industrial",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.black,
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
               const Image(
                 image: AssetImage(
-                    'assets/licenciaturas/Industrial/industrial.jpeg'),
+                    'assets/licenciaturas/Industrial/industrial.jpg'),
                 width: 350,
               ),
               const SizedBox(
@@ -48,33 +35,32 @@ class _IngIndustrialState extends State<IngIndustrial> {
                 children: [
                   Card(
                     child: InkWell(
-                     onTap: () {
+                      onTap: () {
                         Route route =
                             MaterialPageRoute(builder: (__) => PerfilIngreso());
                         Navigator.push(context, route);
-                      }, 
-                      
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Perfil de ingreso",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/12/5.jpeg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Perfil de ingreso",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
                     ),
                   ),
                   Card(
@@ -84,27 +70,27 @@ class _IngIndustrialState extends State<IngIndustrial> {
                             MaterialPageRoute(builder: (__) => PerfilEgreso());
                         Navigator.push(context, route);
                       },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Perfil de egreso",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.elvigia.net/u/fotografias/m/2017/4/12/f608x342-315767_345490_15.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Perfil de egreso",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
                     ),
                   ),
                 ],
@@ -114,63 +100,62 @@ class _IngIndustrialState extends State<IngIndustrial> {
                 children: [
                   Card(
                     child: InkWell(
-                     onTap: () {
+                      onTap: () {
                         Route route =
                             MaterialPageRoute(builder: (__) => Reticula());
                         Navigator.push(context, route);
                       },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Retícula",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
-                        ),
-                       ),
-                    ),
-                    ),
-                  ),
-                  
-                  Card(
-                    child: InkWell(
-                      onTap: () {
-                        Route route =
-                            MaterialPageRoute(builder: (__) => TripticoGestion());
-                        Navigator.push(context, route);
-                      },
-                    child: Container(
-                      width: 160,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: NetworkImage(
-                                  'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
-                      child: const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          "Tríptico",
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white),
-                          textAlign: TextAlign.center,
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://static1.educaedu.com.mx/adjuntos/9/00/78/tecnm-campus-instituto-tecnol-gico-de-ensenada-007820_large.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Retícula",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),
+                  ),
+                  Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route = MaterialPageRoute(
+                            builder: (__) => TripticoGestion());
+                        Navigator.push(context, route);
+                      },
+                      child: Container(
+                        width: 160,
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(
+                                    'https://www.ensenada.tecnm.mx/wp-content/uploads/2021/10/Triptico-Mecatronica-Lado1-2021.jpg'))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            "Tríptico",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -228,6 +213,24 @@ class _IngIndustrialState extends State<IngIndustrial> {
                       style: TextStyle(fontSize: 16),
                       textAlign: TextAlign.justify,
                     ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        Text(
+                          "\u{1F9E2} Modalidad",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Escolarizada horario de lunes a viernes\nSemipresencial horario de viernes y sábado",
+                      style: TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
+                    ),
                   ],
                 ),
               ),
@@ -237,12 +240,12 @@ class _IngIndustrialState extends State<IngIndustrial> {
               Card(
                 child: InkWell(
                   onTap: () async {
-                    const url = 'https://youtu.be/zN2MbswmtLI';
-                      if(await canLaunch(url)){
-                        await launch(url);
-                      }else {
-                        throw 'Could not launch $url';
-                      }
+                    const url = 'https://www.youtube.com/watch?v=zN2MbswmtLI';
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
                   },
                   child: Container(
                     width: double.infinity,
@@ -252,11 +255,11 @@ class _IngIndustrialState extends State<IngIndustrial> {
                         image: const DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(
-                                'https://img.youtube.com/vi/_-Fsq3_jjh4/0.jpg'))),
+                                'https://img.youtube.com/vi/zN2MbswmtLI/0.jpg'))),
                     child: const Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
-                        "El TecNM campus Ensenada, oferta Ingeniería Electrónica.",
+                        "El TecNM campus Ensenada, oferta Ingeniería Industrial.",
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -316,15 +319,13 @@ class _IngIndustrialState extends State<IngIndustrial> {
 class Reticula extends StatelessWidget {
   const Reticula({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Logística Empresarial '),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Industrial/reticula.pdf'),
-          
+      body: SfPdfViewer.asset('assets/licenciaturas/Industrial/reticula.pdf'),
     );
   }
 }
@@ -332,15 +333,14 @@ class Reticula extends StatelessWidget {
 class PerfilEgreso extends StatelessWidget {
   const PerfilEgreso({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Perfil de egreso'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Industrial/perfilEgreso.pdf'),
-          
+      body:
+          SfPdfViewer.asset('assets/licenciaturas/Industrial/perfilEgreso.pdf'),
     );
   }
 }
@@ -348,15 +348,13 @@ class PerfilEgreso extends StatelessWidget {
 class TripticoGestion extends StatelessWidget {
   const TripticoGestion({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Tríptico'),
       ),
-      body: SfPdfViewer.asset(
-          'assets/licenciaturas/Industrial/triptico.pdf'),
-          
+      body: SfPdfViewer.asset('assets/licenciaturas/Industrial/triptico.pdf'),
     );
   }
 }
@@ -364,7 +362,7 @@ class TripticoGestion extends StatelessWidget {
 class PerfilIngreso extends StatelessWidget {
   const PerfilIngreso({Key? key}) : super(key: key);
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -375,4 +373,3 @@ class PerfilIngreso extends StatelessWidget {
     );
   }
 }
-
