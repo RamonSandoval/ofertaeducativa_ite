@@ -28,8 +28,32 @@ class _IngIndustrialState extends State<IngIndustrial> {
                 width: 350,
               ),
               const SizedBox(
-                height: 30,
+              height: 15,
+            ),
+             Row(children: [
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+                    // ignore: prefer_const_constructors
+                    child: Divider(
+                      color: Colors.black,
+                      height: 36,
+                    )),
               ),
+              const Text("Acerca de la Ingeniería"),
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+                    // ignore: prefer_const_constructors
+                    child: Divider(
+                      color: Colors.black,
+                      height: 36,
+                    )),
+              ),
+            ]),
+            const SizedBox(
+              height: 20,
+            ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -132,7 +156,7 @@ class _IngIndustrialState extends State<IngIndustrial> {
                     child: InkWell(
                       onTap: () {
                         Route route = MaterialPageRoute(
-                            builder: (__) => TripticoGestion());
+                            builder: (__) => Triptico());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -323,7 +347,7 @@ class Reticula extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Logística Empresarial '),
+        title: Text('Retítcula '),
       ),
       body: SfPdfViewer.asset('assets/licenciaturas/Industrial/reticula.pdf'),
     );
@@ -337,7 +361,7 @@ class PerfilEgreso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de egreso'),
+        title: Text('Perfil de Egreso'),
       ),
       body:
           SfPdfViewer.asset('assets/licenciaturas/Industrial/perfilEgreso.pdf'),
@@ -345,8 +369,8 @@ class PerfilEgreso extends StatelessWidget {
   }
 }
 
-class TripticoGestion extends StatelessWidget {
-  const TripticoGestion({Key? key}) : super(key: key);
+class Triptico extends StatelessWidget {
+  const Triptico({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -366,7 +390,7 @@ class PerfilIngreso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil de ingreso'),
+        title: Text('Perfil de Ingreso'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Industrial/perfilIngreso.pdf'),

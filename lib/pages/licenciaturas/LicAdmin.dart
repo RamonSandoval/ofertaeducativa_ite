@@ -35,8 +35,32 @@ class _LicAdminState extends State<LicAdmin> {
                 width: 370,
               ),
               const SizedBox(
-                height: 20,
+              height: 15,
+            ),
+             Row(children: [
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+                    // ignore: prefer_const_constructors
+                    child: Divider(
+                      color: Colors.black,
+                      height: 36,
+                    )),
               ),
+              const Text("Acerca de la Licenciatura"),
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+                    // ignore: prefer_const_constructors
+                    child: Divider(
+                      color: Colors.black,
+                      height: 36,
+                    )),
+              ),
+            ]),
+            const SizedBox(
+              height: 20,
+            ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -44,7 +68,7 @@ class _LicAdminState extends State<LicAdmin> {
                     child: InkWell(
                       onTap: () {
                         Route route =
-                            MaterialPageRoute(builder: (__) => Triptico());
+                            MaterialPageRoute(builder: (__) => PerfilIngreso());
                         Navigator.push(context, route);
                       },
                       child: Container(
@@ -59,7 +83,7 @@ class _LicAdminState extends State<LicAdmin> {
                         child: const Padding(
                           padding: EdgeInsets.all(10.0),
                           child: Text(
-                            "Perfil de ingreso",
+                            "Perfil de Ingreso",
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
@@ -71,6 +95,12 @@ class _LicAdminState extends State<LicAdmin> {
                     ),
                   ),
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => PerfilEgreso());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -83,7 +113,7 @@ class _LicAdminState extends State<LicAdmin> {
                       child: const Padding(
                         padding: EdgeInsets.all(10.0),
                         child: Text(
-                          "Perfil de egreso",
+                          "Perfil de Egreso",
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
@@ -93,12 +123,20 @@ class _LicAdminState extends State<LicAdmin> {
                       ),
                     ),
                   ),
+                  ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  
                   Card(
+                    child: InkWell(
+                      onTap: () {
+                        Route route =
+                            MaterialPageRoute(builder: (__) => Reticula());
+                        Navigator.push(context, route);
+                      },
                     child: Container(
                       width: 160,
                       height: 130,
@@ -119,6 +157,7 @@ class _LicAdminState extends State<LicAdmin> {
                           textAlign: TextAlign.center,
                         ),
                       ),
+                    ),
                     ),
                   ),
                   Card(
@@ -324,10 +363,55 @@ class Triptico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Triptico'),
+        title: Text('Tríptico'),
       ),
       body: SfPdfViewer.asset(
-          'assets/licenciaturas/Electromecanica/tripticoelectro.pdf'),
+          'assets/licenciaturas/Administracion/triptico.pdf'),
+    );
+  }
+}
+
+class PerfilIngreso extends StatelessWidget {
+  const PerfilIngreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Perfil de Ingreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Administracion/perfilingreso.pdf'),
+    );
+  }
+}
+
+class PerfilEgreso extends StatelessWidget {
+  const PerfilEgreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Perfil de Egreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Administracion/perfilegreso.pdf'),
+    );
+  }
+}
+
+class Reticula extends StatelessWidget {
+  const Reticula({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Retícula'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Administracion/reticula.pdf'),
     );
   }
 }

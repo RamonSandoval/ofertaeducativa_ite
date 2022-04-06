@@ -32,7 +32,31 @@ class _IngElectronicaState extends State<IngElectronica> {
               width: 350,
             ),
             const SizedBox(
-              height: 30,
+              height: 15,
+            ),
+             Row(children: [
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 10.0, right: 20.0),
+                    // ignore: prefer_const_constructors
+                    child: Divider(
+                      color: Colors.black,
+                      height: 36,
+                    )),
+              ),
+              const Text("Acerca de la Ingeniería"),
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 20.0, right: 10.0),
+                    // ignore: prefer_const_constructors
+                    child: Divider(
+                      color: Colors.black,
+                      height: 36,
+                    )),
+              ),
+            ]),
+            const SizedBox(
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -41,7 +65,7 @@ class _IngElectronicaState extends State<IngElectronica> {
                   child: InkWell(
                     onTap: () {
                       Route route =
-                          MaterialPageRoute(builder: (__) => const Triptico());
+                          MaterialPageRoute(builder: (__) => const PerfilIngreso());
                       Navigator.push(context, route);
                     },
                     child: Container(
@@ -56,7 +80,7 @@ class _IngElectronicaState extends State<IngElectronica> {
                       child: const Padding(
                         padding: EdgeInsets.all(10.0),
                         child: Text(
-                          "Perfil de ingreso",
+                          "Perfil de Ingreso",
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
@@ -68,6 +92,12 @@ class _IngElectronicaState extends State<IngElectronica> {
                   ),
                 ),
                 Card(
+                  child: InkWell(
+                    onTap: () {
+                      Route route =
+                          MaterialPageRoute(builder: (__) => const PerfilEgreso());
+                      Navigator.push(context, route);
+                    },
                   child: Container(
                     width: 160,
                     height: 130,
@@ -80,7 +110,7 @@ class _IngElectronicaState extends State<IngElectronica> {
                     child: const Padding(
                       padding: EdgeInsets.all(10.0),
                       child: Text(
-                        "Perfil de egreso",
+                        "Perfil de Egreso",
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
@@ -89,6 +119,7 @@ class _IngElectronicaState extends State<IngElectronica> {
                       ),
                     ),
                   ),
+                  ),
                 ),
               ],
             ),
@@ -96,6 +127,12 @@ class _IngElectronicaState extends State<IngElectronica> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Card(
+                  child: InkWell(
+                    onTap: () {
+                      Route route =
+                          MaterialPageRoute(builder: (__) => const Reticula());
+                      Navigator.push(context, route);
+                    },
                   child: Container(
                     width: 160,
                     height: 130,
@@ -116,6 +153,7 @@ class _IngElectronicaState extends State<IngElectronica> {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                  ),
                   ),
                 ),
                 Card(
@@ -323,7 +361,52 @@ class Triptico extends StatelessWidget {
         title: const Text('Triptico'),
       ),
       body: SfPdfViewer.asset(
-          'assets/licenciaturas/Electromecanica/tripticoelectro.pdf'),
+          'assets/licenciaturas/Electronica/triptico.pdf'),
+    );
+  }
+}
+
+class PerfilIngreso extends StatelessWidget {
+  const PerfilIngreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Perfil de Ingreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electronica/perfilingreso.pdf'),
+    );
+  }
+}
+
+class PerfilEgreso extends StatelessWidget {
+  const PerfilEgreso({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Perfil de Egreso'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electronica/perfilegreso.pdf'),
+    );
+  }
+}
+
+class Reticula extends StatelessWidget {
+  const Reticula({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Retícula'),
+      ),
+      body: SfPdfViewer.asset(
+          'assets/licenciaturas/Electronica/reticula.pdf'),
     );
   }
 }
