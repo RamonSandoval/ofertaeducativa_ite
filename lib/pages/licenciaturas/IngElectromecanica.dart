@@ -381,7 +381,7 @@ class PerfilEgreso extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Perfil de Ingreso'),
+        title: const Text('Perfil de Engreso'),
       ),
       body: SfPdfViewer.asset(
           'assets/licenciaturas/Electromecanica/perfilegreso.pdf'),
